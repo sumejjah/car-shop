@@ -1,0 +1,107 @@
+<div class="header">
+  <div class="wrap">   
+     <div class="header-top"> 
+          <div class="logo">
+        <%= image_tag("logo.png", :alt => "") %>
+      </div>
+      <div class="clear"></div> 
+      </div>
+  </div>
+  <div class="header-bottom">
+    <div class="wrap">  
+    <div id="cssmenu" style="margin-right:-80px;">
+       <ul style="margin-bottom:0;">
+         <li class="active"><%= link_to 'Home', controller:"pages" %><li>
+         <%if current_user%>
+                <% if current_user.role_id.equal?(1) %>
+                  <li><%= link_to 'Product', products_path %></li>
+              <%end %>
+               <% if current_user.role_id.equal?(2) %>
+                   <li><%= link_to 'My previous orders', show_all_history_url %></li>
+                   <li><%= link_to 'Show products', show_all_url %></li>
+                   <li><%= link_to 'Cart', show_all_cart_url %></li>
+               <%end %>
+               <%end%>
+         <% if current_user %>
+         <li><%= link_to "#{current_user.full_name}", show_user_path(current_user.id) %></li>
+         <li><%= link_to "Log Out", session_path("current"), method: "delete" %> </li>
+   
+       <% else %>
+         <li><%= link_to 'Login', new_session_path %></li>
+         <li><%= link_to 'Sign up', new_user_path %><li>
+         <%end %>
+      </ul>
+    </div>
+    <div class="clear"></div> 
+    </div>
+   </div>
+</div>
+
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-1"></div>
+  <div class="col-md-8">
+      <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :product_name, class:'form-control'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :product_description,  class:'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :availability %>
+    <%= form.check_box :availability, id: :product_availability %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.number_field :code, id: :product_code, class:'form-control'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_price %>
+    <%= form.number_field :product_price, id: :product_price, class:'form-control'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_quantity %>
+    <%= form.number_field :product_quantity, id: :product_quantity, class:'form-control'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %><br>
+    <%= form.file_field :image %>
+    <% if form.object.image? %>
+      <%= image_tag form.object.image.thumb.url %>
+      <%= form.label :remove_image %>
+      <%= form.check_box :remove_image %> 
+    <% end %>
+  </div>
+
+  <div class="actions">
+  <%= form.submit 'Submit', class:'btn btn-success'%>
+  </div>
+  </div>
+  <div class="col-md-1"></div>
+  <div class="col-md-1"></div>
+</div>
+  
+  
+  </div>
+<% end %>

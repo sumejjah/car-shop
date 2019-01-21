@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Newtests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @newtests.each do |newtest| %>
+      <tr>
+        <td><%= newtest.name %></td>
+        <td><%= link_to 'Show', newtest %></td>
+        <td><%= link_to 'Edit', edit_newtest_path(newtest) %></td>
+        <td><%= link_to 'Destroy', newtest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Newtest', new_newtest_path %>

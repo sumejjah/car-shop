@@ -1,0 +1,2 @@
+class Newtest < ApplicationRecord
+end

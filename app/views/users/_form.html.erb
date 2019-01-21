@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+.rola {
+    display: none;
+}
+</style>
+<title>Free 4Pets Website Template</title>
+<% content_for :css do
+	stylesheet_link_tag '/assets/stylesheets/style.css'
+end %>
+<% content_for :css do
+	stylesheet_link_tag '/assets/stylesheets/slider.css'
+end %>
+<% content_for :js do
+	javascript_include_tag '/assets/javascripts/jquery-1.9.0.min.js'
+end %>
+<% content_for :js do
+	javascript_include_tag '/assets/javascripts/jquery.nivo.slider.js'
+end %>
+<% content_for :js do
+	javascript_include_tag '/assets/javascripts/allScripts.js'
+end %>
+<% content_for :js do
+	javascript_include_tag '/assets/javascripts/jquery.lightbox.js'
+end %>
+<% content_for :css do
+	stylesheet_link_tag '/assets/stylesheets/lightbox.css',media: 'screen'
+end %>
+<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto+Condensed'/>
+
+<body>
+<div class="header">
+	<div class="wrap">   
+	   <div class="header-top">	
+	        <div class="logo">
+				<%= image_tag("logo.png", :alt => "") %>
+			</div>
+			<div class="clear"></div> 
+	    </div>
+	</div>
+	<div class="header-bottom">
+	  <div class="wrap">	
+		<div id="cssmenu" style="margin-right:-80px;">
+			 <ul style="margin-bottom:0;">
+			   <li class="active"><%= link_to 'Home', controller:"pages" %><li>
+			   <%if current_user%>
+            		<% if current_user.role_id.equal?(1) %>
+            	    <li><%= link_to 'Product', products_path %></li>
+              <%end %>
+               <% if current_user.role_id.equal?(2) %>
+                   <li><%= link_to 'My previous orders', show_all_history_url %></li>
+                   <li><%= link_to 'Show products', show_all_url %></li>
+                   <li><%= link_to 'Cart', show_all_cart_url %></li>
+               <%end %>
+               <%end%>
+			   <% if current_user %>
+			   <li><%= link_to "#{current_user.full_name}", show_user_path(current_user.id) %></li>
+			   <li><%= link_to "Log Out", session_path("current"), method: "delete" %> </li>
+	 
+			 <% else %>
+			   <li><%= link_to 'Login', new_session_path %></li>
+			   <li><%= link_to 'Sign up', new_user_path %><li>
+		     <%end %>
+			</ul>
+		</div>
+		<div class="clear"></div> 
+	  </div>
+   </div>
+</div>
+<div class="row" style="margin: 0 1px 0 0; padding: 6% 0px 16.1%; overflow-y:hidden; background-color: seagreen;">
+
+<div class="panel panel-info col-md-6 col-md-offset-3">
+<%if @user.full_name%>
+<div class="panel-heading">
+  <h3 class="panel-title"><%= @user.full_name %></h3>
+</div>
+<%end%>
+<div class="panel-body">
+
+<%= form_with(model: user, local: true) do |form| %>
+<% if user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(user.errors.count, "greška") %> prohibited this user from being saved:</h2>
+
+    <ul>
+    <% user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="form-group">
+
+<div class="field">
+  <%= form.text_field :full_name, id: :full_name , class: 'form-control input-lg', placeholder: 'Full name' %>
+</div>
+
+<div class="field">
+  <%= form.text_field :username, id: :user_username, class: 'form-control input-lg', placeholder: 'Username' %>
+</div>
+
+<div class="field">
+  <%= form.text_field :password, id: :user_password, class: 'form-control input-lg', placeholder: 'Password' %>
+</div>
+
+<div class="rola">
+<div class="field">
+  <%= form.text_field :role_id, id: :role_id, class: 'form-control input-lg', placeholder: 'Rola',value:"2" %>
+</div>
+
+</div>
+ 
+<br>
+      <div class="actions">
+    <%= form.submit 'Sign up', class:'btn btn-primary input-lg logInButton', style:'width:100%;margin: -0.05px; font-size:1.2em; font-weight:bold; background-color:seagreen;background-color: mediumseagreen;   border-color: transparent;' %>
+  </div>
+</div>
+
+<% end %>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>
+
+
+
