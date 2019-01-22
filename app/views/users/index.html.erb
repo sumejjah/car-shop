@@ -36,7 +36,7 @@ end %>
   <div class="wrap">   
      <div class="header-top"> 
           <div class="logo">
-        <%= image_tag("logo.png", :alt => "") %>
+        <%= image_tag("carlogoP.png", :alt => "") %>
       </div>
       <div class="clear"></div> 
       </div>
@@ -48,7 +48,7 @@ end %>
          <li class="active"><%= link_to 'Home', controller:"pages" %><li>
          <%if current_user%>
                 <% if current_user.role_id.equal?(1) %>
-                  <li><%= link_to 'Product', products_path %></li>
+                  <%= link_to 'Products', show_all_url %>
               <%end %>
                <% if current_user.role_id.equal?(2) %>
                    <li><%= link_to 'My previous orders', show_all_history_url %></li>

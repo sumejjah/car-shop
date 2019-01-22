@@ -10,7 +10,12 @@ class ProductsController < ApplicationController
     brojac = 0
 
     n = Time.now
-    d = Time.gm(n.year, n.month - 1, n.day)
+    if n.month == 1
+      d = Time.gm(n.year, n.month, n.day)
+    else
+      d = Time.gm(n.year, n.month - 1, n.day)
+    end
+    
     previous_month = d.strftime("%m")
 
     History.all.each do |histories|

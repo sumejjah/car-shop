@@ -2017,3 +2017,1439 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 360ms (Views: 320.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-22 10:16:40 +0100
+  [1m[35m (43.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (41.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (61942.0ms)
+Completed 200 OK in 62524ms (Views: 62194.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 10:24:59 +0100
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1211.2ms)
+Completed 200 OK in 1477ms (Views: 1439.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 10:47:23 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 301ms (Views: 240.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-01-22 10:47:29 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMKH4UFyjgHSnfLRsIiFE+ONyVb/JxCBlAvODqTnMh502EQ1bkfgR2GxtBfw+wrfWrYq1xqRfsHU3ptub8Ox3g==", "username"=>"amina", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'amina' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 319ms (ActiveRecord: 58.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 10:47:30 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 207ms (Views: 178.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-01-22 10:47:35 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (44.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (37.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (178.9ms)
+Completed 200 OK in 804ms (Views: 294.1ms | ActiveRecord: 89.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 10:47:41 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 209ms (Views: 184.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_user%7B2%7D" for 127.0.0.1 at 2019-01-22 10:47:48 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (114.1ms)
+Completed 200 OK in 421ms (Views: 244.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 10:47:52 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 197ms (Views: 173.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 10:48:29 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 311ms (Views: 151.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 10:48:51 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 164ms (Views: 139.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 10:49:02 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 211ms (Views: 184.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 10:52:09 +0100
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (816.5ms)
+Completed 200 OK in 1050ms (Views: 1007.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 10:52:47 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (3.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (95.0ms)
+Completed 200 OK in 401ms (Views: 349.5ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 10:57:19 +0100
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (773.6ms)
+Completed 200 OK in 1010ms (Views: 965.7ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 10:57:49 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (65.9ms)
+Completed 200 OK in 312ms (Views: 272.7ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-01-22 10:57:53 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vn1NglRZ/q6ImqgTMobd8cl5hF7DPPp7zI78GWGN9UuKZ45We2yQ6Du27tVy9VI9cEJn3yaKlDuMW6l5qql2iw==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 10:57:53 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 208ms (Views: 185.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 10:57:56 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 193ms (Views: 161.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-01-22 10:58:02 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pa0TuUYNy/q5tdjDV3aIvEKUPq/aLT86QnJvS7yFaOWRt9BtaTilvAqZngUXBQdw+6/dLj+bUXoCpzord6HrJQ==", "username"=>"sumejja", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'sumejja' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 10:58:02 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 216ms (Views: 191.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 10:58:06 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (122.9ms)
+Completed 500 Internal Server Error in 485ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (argument out of range):
+    94:         <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    95:         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    96: 
+    97:         <% if product.quantity > get_availability(product.id) %>
+    98:         	<td><span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" 
+    99:         		title="Dovoljno na stanju"></span></td>
+   100:         
+  
+app/controllers/products_controller.rb:13:in `gm'
+app/controllers/products_controller.rb:13:in `get_availability'
+app/views/products/index.html.erb:97:in `block in _app_views_products_index_html_erb___405124363_98197680'
+app/views/products/index.html.erb:85:in `_app_views_products_index_html_erb___405124363_98197680'
+Started GET "/show_user%7B3%7D" for 127.0.0.1 at 2019-01-22 10:59:38 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 308ms (Views: 263.8ms | ActiveRecord: 9.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-01-22 10:59:44 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0Z0u6MK9sRvSg+2sTPyXc5p+UFuKV1spIucZdioLiinlh+087YjfXWGvq2oMjxi/I0Wz2m/hNWliMkwW4S8J6Q==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 10:59:44 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 178ms (Views: 154.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 10:59:47 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 156ms (Views: 135.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-01-22 11:00:04 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ib4y15fk29r9jTKRxHDnu/BzcrH6NltqK9D7mKBPodu9pPEDuNG1nE6hdFeEA2h3SUiRMB+ANSprBa74a2siGw==", "username"=>"korisnik ", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'korisnik ' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:00:04 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 179ms (Views: 155.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:00:08 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (31.0ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (argument out of range):
+    94:         <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    95:         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    96: 
+    97:         <% if product.quantity > get_availability(product.id) %>
+    98:         	<td><span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" 
+    99:         		title="Dovoljno na stanju"></span></td>
+   100:         
+  
+app/controllers/products_controller.rb:13:in `gm'
+app/controllers/products_controller.rb:13:in `get_availability'
+app/views/products/index.html.erb:97:in `block in _app_views_products_index_html_erb___405124363_92066040'
+app/views/products/index.html.erb:85:in `_app_views_products_index_html_erb___405124363_92066040'
+Started GET "/show_user%7B1%7D" for 127.0.0.1 at 2019-01-22 11:00:17 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 161ms (Views: 137.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-01-22 11:00:21 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"94xaJaW6rWAasYZT6+JWRDNGmW7sLWSWvGxniPb4c4TDlpnxio/DJqmdwJWrkdmIin167wmbCtb8uTLoPdzwRA==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:00:21 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 190ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 11:00:24 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 264ms (Views: 234.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-01-22 11:00:29 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uMTL0ZYJAjMPn4o0pLsghDuSTejTXhWfeAtmJO+zU6GM3ggFuTxsdbyzzPLkyK9IgqmuaTboe9843jNEJJfQYQ==", "username"=>"amina", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'amina' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:00:29 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 195ms (Views: 168.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_all_cart" for 127.0.0.1 at 2019-01-22 11:00:37 +0100
+Processing by CartsController#show_all_cart as HTML
+  Rendering carts/show_all_cart.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCart Load (31.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  Rendered carts/show_all_cart.html.erb within layouts/application (88.0ms)
+Completed 200 OK in 347ms (Views: 253.3ms | ActiveRecord: 34.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:00:41 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 176ms (Views: 152.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:00:55 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 189ms (Views: 168.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:07:09 +0100
+  [1m[35m (0.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (779.9ms)
+Completed 200 OK in 1010ms (Views: 962.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:07:39 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 255ms (Views: 218.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-01-22 11:07:43 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (2.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 221ms (Views: 188.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:07:45 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 196ms (Views: 166.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2019-01-22 11:07:53 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 282ms (Views: 145.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:07:59 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (45.0ms)
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (argument out of range):
+    94:         <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    95:         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    96: 
+    97:         <% if product.quantity > get_availability(product.id) %>
+    98:         	<td><span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" 
+    99:         		title="Dovoljno na stanju"></span></td>
+   100:         
+  
+app/controllers/products_controller.rb:13:in `gm'
+app/controllers/products_controller.rb:13:in `get_availability'
+app/views/products/index.html.erb:97:in `block in _app_views_products_index_html_erb__639288778_96075060'
+app/views/products/index.html.erb:85:in `_app_views_products_index_html_erb__639288778_96075060'
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:08:12 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 180ms (Views: 160.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_user%7B2%7D" for 127.0.0.1 at 2019-01-22 11:08:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 210ms (Views: 184.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-01-22 11:08:24 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 179ms (Views: 155.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-01-22 11:08:31 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ONApJoczgsRh4npwupMG00hNQ/EvQKsm6h5mVSXXzq8MyuryqAbsgtLOPLb64Ikf8XagcMr2xWaqyzM17vNNbw==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:08:31 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 186ms (Views: 165.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:11:33 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 190ms (Views: 170.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 11:11:37 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 194ms (Views: 167.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 11:27:26 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (10132.1ms)
+Completed 200 OK in 10350ms (Views: 10321.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-01-22 11:27:47 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IzpzWDns4Ct6JWy9Ral4gKYmxcMvCNwpQ73IMwFDTEQXILCMFtmObckJKnsF2vdMHx0mQsq+smkDaJ1TymfPhA==", "username"=>"amina", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'amina' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:27:47 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 413ms (Views: 173.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-01-22 11:28:25 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s3ddwn6F6UXBY9k3hyfMGgt5871ctxC0Yf/qHHzscNyHbZ4WUbCHA3JPn/HHVEPWskIQPLkBfvQhKr98t8jzHA==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:28:25 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 185ms (Views: 157.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 11:28:27 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 149ms (Views: 126.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 11:28:41 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 155ms (Views: 132.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-01-22 11:29:06 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"otKPaGOjTYE73jMGY+vl3BUJrxdy142fNNReF0F0De+WyEy8TJYjx4jydcAjmGoQrDJMlpdh4990AQt3ilCOLw==", "username"=>"amina", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'amina' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:29:06 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 198ms (Views: 173.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:31:56 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 185ms (Views: 162.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-01-22 11:32:03 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 201ms (Views: 145.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:32:05 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 179ms (Views: 152.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_user%7B2%7D" for 127.0.0.1 at 2019-01-22 11:32:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 182ms (Views: 146.4ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-01-22 11:32:10 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OfofTkX8S57eXiW9IbNp6HSIOsfiyOYyVfNU7cLD+EIN4Nyaaskl2G1yY3thwOYkzbPZRgd+iHIVJgGNCed7gg==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:32:10 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 183ms (Views: 158.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 11:34:44 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 168ms (Views: 145.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-01-22 11:34:49 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Eyel00+T19OspbXxrJtY6vG1iJ3zfIgaVwccxSiZTT8nPWYHYKa5lR+J8zfs6NcmSI5rHBbK5loX0kml473O/w==", "username"=>"amina", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'amina' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:34:49 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 192ms (Views: 168.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:34:52 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 173ms (Views: 151.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2019-01-22 11:34:57 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 155ms (Views: 132.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:34:59 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (38.0ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (argument out of range):
+    94:         <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    95:         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    96: 
+    97:         <% if product.quantity > get_availability(product.id) %>
+    98:         	<td><span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" 
+    99:         		title="Dovoljno na stanju"></span></td>
+   100:         
+  
+app/controllers/products_controller.rb:13:in `gm'
+app/controllers/products_controller.rb:13:in `get_availability'
+app/views/products/index.html.erb:97:in `block in _app_views_products_index_html_erb__639288778_98063556'
+app/views/products/index.html.erb:85:in `_app_views_products_index_html_erb__639288778_98063556'
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:35:19 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 199ms (Views: 175.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:35:22 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 171ms (Views: 144.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:37:29 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 172ms (Views: 150.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2019-01-22 11:37:32 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 166ms (Views: 138.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:37:34 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (39.0ms)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (argument out of range):
+    94:         <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    95:         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    96: 
+    97:         <% if product.quantity > get_availability(product.id) %>
+    98:         	<td><span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" 
+    99:         		title="Dovoljno na stanju"></span></td>
+   100:         
+  
+app/controllers/products_controller.rb:13:in `gm'
+app/controllers/products_controller.rb:13:in `get_availability'
+app/views/products/index.html.erb:97:in `block in _app_views_products_index_html_erb__639288778_50000940'
+app/views/products/index.html.erb:85:in `_app_views_products_index_html_erb__639288778_50000940'
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:38:07 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 254ms (Views: 216.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-01-22 11:38:11 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 185ms (Views: 160.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:38:14 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 171ms (Views: 150.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2019-01-22 11:38:28 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 160ms (Views: 134.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/add_to_cart?id=1&user_id=2" for 127.0.0.1 at 2019-01-22 11:38:30 +0100
+Processing by ProductsController#add_to_cart as HTML
+  Parameters: {"id"=>"1", "user_id"=>"2"}
+  [1m[35m (13.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (202.3ms)[0m  [1m[32mINSERT INTO `carts` (`user_id`, `product_id`, `quantity`, `created_at`, `updated_at`) VALUES (2, 1, 1, '2019-01-22 10:38:31', '2019-01-22 10:38:31')[0m
+  [1m[35m (55.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering products/add_to_cart.html.erb within layouts/application
+  Rendered products/add_to_cart.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 909ms (Views: 124.6ms | ActiveRecord: 309.5ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:38:33 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 177ms (Views: 154.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:39:07 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 170ms (Views: 144.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2019-01-22 11:39:11 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 167ms (Views: 142.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:39:14 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (38.0ms)
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (argument out of range):
+    94:         <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    95:         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    96: 
+    97:         <% if product.quantity > get_availability(product.id) %>
+    98:         	<td><span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" 
+    99:         		title="Dovoljno na stanju"></span></td>
+   100:         
+  
+app/controllers/products_controller.rb:13:in `gm'
+app/controllers/products_controller.rb:13:in `get_availability'
+app/views/products/index.html.erb:97:in `block in _app_views_products_index_html_erb__639288778_103575204'
+app/views/products/index.html.erb:85:in `_app_views_products_index_html_erb__639288778_103575204'
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:39:47 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 185ms (Views: 156.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all_cart" for 127.0.0.1 at 2019-01-22 11:40:14 +0100
+Processing by CartsController#show_all_cart as HTML
+  Rendering carts/show_all_cart.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered carts/show_all_cart.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 165ms (Views: 141.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/carlogoP.png" for 127.0.0.1 at 2019-01-22 11:40:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/carlogoP.png"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-01-22 11:40:24 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cB6xdn9q2nxhcswt+aWonIwfZ0Bv86g0wDWLawKuN/NEBHKiUF+0OtJeiuu51idQNSSEwYpFxnSA4N4LyYq0Mw==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:40:24 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 193ms (Views: 168.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 11:40:27 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 161ms (Views: 137.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-01-22 11:40:33 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fIMJWbSERT/ofkpDcyQyEjs3HpiNr3g4Z6p7LUutG1tImcqNm7EreVtSDIUzV73eggz9GWgZFngnfy5NgImYmw==", "username"=>"sumejja", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'sumejja' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:40:33 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 194ms (Views: 170.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:40:36 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (33.0ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (argument out of range):
+    94:         <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    95:         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    96: 
+    97:         <% if product.quantity > get_availability(product.id) %>
+    98:         	<td><span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" 
+    99:         		title="Dovoljno na stanju"></span></td>
+   100:         
+  
+app/controllers/products_controller.rb:13:in `gm'
+app/controllers/products_controller.rb:13:in `get_availability'
+app/views/products/index.html.erb:97:in `block in _app_views_products_index_html_erb__639288778_47219184'
+app/views/products/index.html.erb:85:in `_app_views_products_index_html_erb__639288778_47219184'
+Started GET "/show_user%7B3%7D" for 127.0.0.1 at 2019-01-22 11:41:07 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 183ms (Views: 158.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:43:18 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (49.0ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (argument out of range):
+    94:         <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    95:         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    96: 
+    97:         <% if product.quantity > get_availability(product.id) %>
+    98:         	<td><span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" 
+    99:         		title="Dovoljno na stanju"></span></td>
+   100:         
+  
+app/controllers/products_controller.rb:13:in `gm'
+app/controllers/products_controller.rb:13:in `get_availability'
+app/views/products/index.html.erb:97:in `block in _app_views_products_index_html_erb__639288778_107649144'
+app/views/products/index.html.erb:85:in `_app_views_products_index_html_erb__639288778_107649144'
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:43:28 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 187ms (Views: 155.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:44:02 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 180ms (Views: 153.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:44:05 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (31.0ms)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (argument out of range):
+    94:         <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    95:         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    96: 
+    97:         <% if product.quantity > get_availability(product.id) %>
+    98:         	<td><span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" 
+    99:         		title="Dovoljno na stanju"></span></td>
+   100:         
+  
+app/controllers/products_controller.rb:13:in `gm'
+app/controllers/products_controller.rb:13:in `get_availability'
+app/views/products/index.html.erb:97:in `block in _app_views_products_index_html_erb__639288778_85060020'
+app/views/products/index.html.erb:85:in `_app_views_products_index_html_erb__639288778_85060020'
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:45:27 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "carlogoP.jpg" is not present in the asset pipeline.):
+    36: 	<div class="wrap" style="height: 100 px">   
+    37: 	   <div class="header-top" >	
+    38: 	        <div class="logo" >
+    39: 				<%= image_tag("carlogoP.jpg", :alt => "") %>
+    40: 			</div>
+    41: 			<div class="clear"></div> 
+    42: 	    </div>
+  
+app/views/pages/index.html.erb:39:in `_app_views_pages_index_html_erb__700520096_49432092'
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:45:31 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (63.0ms)
+Completed 500 Internal Server Error in 1281ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "carlogoP.jpg" is not present in the asset pipeline.):
+    36: 	<div class="wrap" style="height: 100 px">   
+    37: 	   <div class="header-top" >	
+    38: 	        <div class="logo" >
+    39: 				<%= image_tag("carlogoP.jpg", :alt => "") %>
+    40: 			</div>
+    41: 			<div class="clear"></div> 
+    42: 	    </div>
+  
+app/views/pages/index.html.erb:39:in `_app_views_pages_index_html_erb__700520096_101366004'
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:46:04 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 184ms (Views: 161.7ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-01-22 11:46:09 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S7LtphZhGhTq08mlgSKug1z4JnyNXM5nRIZj6OlN5eh/qC5yOVR0Uln/j2PBUSFP5cPF/WjqoCcEUzaIImlmKA==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:46:09 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 180ms (Views: 156.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 11:46:12 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 157ms (Views: 135.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-22 11:46:14 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (11.0ms)
+  Rendered users/new.html.erb within layouts/application (302.9ms)
+Completed 200 OK in 461ms (Views: 437.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-22 11:49:24 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.0ms)
+  Rendered users/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 187ms (Views: 162.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-22 11:49:29 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.0ms)
+  Rendered users/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 191ms (Views: 169.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-22 11:50:17 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.0ms)
+  Rendered users/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 186ms (Views: 162.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 11:50:21 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 162ms (Views: 135.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-22 11:50:23 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (10.0ms)
+  Rendered users/new.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 191ms (Views: 169.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:50:24 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 184ms (Views: 153.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 11:50:26 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 156ms (Views: 132.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-01-22 11:50:30 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YVtk/k5afAHisLR3+wkYtv/vhXdYjCGNwYZE/KdzZIxVQacqYW8SR1Gc8rG7epd6RtRm9r06T82BUxGcbFfnTA==", "username"=>"amina", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'amina' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:50:30 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 215ms (Views: 187.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-01-22 11:50:33 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 167ms (Views: 140.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-01-22 11:51:22 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 189ms (Views: 164.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-01-22 11:51:25 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 172ms (Views: 148.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:51:27 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 169ms (Views: 147.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_all_cart" for 127.0.0.1 at 2019-01-22 11:51:29 +0100
+Processing by CartsController#show_all_cart as HTML
+  Rendering carts/show_all_cart.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered carts/show_all_cart.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 171ms (Views: 147.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/carlogoP.png" for 127.0.0.1 at 2019-01-22 11:51:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/carlogoP.png"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/show_all_cart" for 127.0.0.1 at 2019-01-22 11:52:15 +0100
+Processing by CartsController#show_all_cart as HTML
+  Rendering carts/show_all_cart.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered carts/show_all_cart.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 180ms (Views: 155.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_user%7B2%7D" for 127.0.0.1 at 2019-01-22 11:52:20 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 177ms (Views: 151.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all_cart" for 127.0.0.1 at 2019-01-22 11:52:24 +0100
+Processing by CartsController#show_all_cart as HTML
+  Rendering carts/show_all_cart.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCart Load (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered carts/show_all_cart.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 175ms (Views: 150.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-01-22 11:52:28 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 179ms (Views: 154.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2019-01-22 11:52:35 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 172ms (Views: 149.4ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-01-22 11:52:38 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GEOZ86zhXrCKIa90uIntrfHF9ybpdJUf3jyEMw+GRuUsWVong9Qw9jkN6bL4+mJhSP4UpwzC+1+e6dFTxKLFJQ==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:52:38 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 180ms (Views: 156.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-01-22 11:52:40 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 163ms (Views: 139.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-01-22 11:52:44 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1dqmdpIRAewGM5ms4kEYNPUtBxtl2xu8K/nvclHbIKzhwGWivSRvqrUf32qiMpf4TBbkmoBtdfxrLLoSmv+jbA==", "username"=>"sumejja", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'sumejja' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:52:45 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 201ms (Views: 176.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:54:23 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (38.0ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (argument out of range):
+    94:         <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    95:         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    96: 
+    97:         <% if product.quantity > get_availability(product.id) %>
+    98:         	<td><span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" 
+    99:         		title="Dovoljno na stanju"></span></td>
+   100:         
+  
+app/controllers/products_controller.rb:13:in `gm'
+app/controllers/products_controller.rb:13:in `get_availability'
+app/views/products/index.html.erb:97:in `block in _app_views_products_index_html_erb__639288778_102293268'
+app/views/products/index.html.erb:85:in `_app_views_products_index_html_erb__639288778_102293268'
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:56:08 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (82.0ms)
+Completed 200 OK in 281ms (Views: 246.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:56:15 +0100
+  
+SyntaxError (C:/Users/Sumejja/Desktop/car-shop/app/controllers/products_controller.rb:129: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/products_controller.rb:129: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:56:44 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 203ms (Views: 181.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:56:47 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 280ms (Views: 192.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_user%7B3%7D" for 127.0.0.1 at 2019-01-22 11:56:54 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 245ms (Views: 216.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:56:56 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 186ms (Views: 164.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2019-01-22 11:56:59 +0100
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered products/_form.html.erb (433.3ms)
+  Rendered products/edit.html.erb within layouts/application (454.3ms)
+Completed 200 OK in 608ms (Views: 583.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-22 11:57:05 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 205ms (Views: 177.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-01-22 11:57:14 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"j0YwY9XDhRoNxzMrBZg/JDEGS0aFv0bXtyj+G2rfrfm7XPO3+vbrXL7rde1F67DoiD2ox2AJKJf3/at7ofsuOQ==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:57:14 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 193ms (Views: 172.6ms | ActiveRecord: 0.0ms)
+
+
