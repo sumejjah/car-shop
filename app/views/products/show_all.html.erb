@@ -82,6 +82,7 @@ end %>
       
       <th>Name</th>
       <th>Description</th>
+      <th>Picture</th>
       <th>Code</th>
       <th>Price</th>
       <th>Quantity</th>
@@ -95,6 +96,8 @@ end %>
     
         
         <td><%= product.name %></td>
+        <!-- OVDJE TREBA BITI product.image umjesto linka -->
+        <td><%= image_tag 'https://www.nfcworld.com/wp-content/uploads/2016/07/alibabacar200.jpg' %></td>
         <td><%= product.description %></td>
         <td><%= product.code %></td>
         <td><%= product.price %> $</td>
