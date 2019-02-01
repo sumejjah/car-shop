@@ -3453,3 +3453,2575 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 193ms (Views: 172.6ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (130.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK('4663098154667039850', 0)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateServices (20190131233251)
+  [1m[35m (3954.5ms)[0m  [1m[35mCREATE TABLE `services` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `car_name` varchar(255), `bought_here` tinyint(1), `users_id` bigint, `description` varchar(255), `status` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_services_on_users_id`  (`users_id`), CONSTRAINT `fk_rails_6d88508e0f`
+FOREIGN KEY (`users_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (54.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190131233251')[0m
+  [1m[35m (150.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('4663098154667039850')[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-02-01 00:36:36 +0100
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (23321.2ms)
+Completed 200 OK in 23637ms (Views: 23568.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/service" for 127.0.0.1 at 2019-02-01 00:37:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/service"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/services" for 127.0.0.1 at 2019-02-01 00:37:51 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (3.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (282.9ms)
+Completed 500 Internal Server Error in 540ms (ActiveRecord: 40.1ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Service::Users):
+    19:       <tr>
+    20:         <td><%= service.car_name %></td>
+    21:         <td><%= service.bought_here %></td>
+    22:         <td><%= service.users %></td>
+    23:         <td><%= service.description %></td>
+    24:         <td><%= service.status %></td>
+    25:         <td><%= link_to 'Show', service %></td>
+  
+app/views/services/index.html.erb:22:in `block in _app_views_services_index_html_erb__1027457234_98272716'
+app/views/services/index.html.erb:18:in `_app_views_services_index_html_erb__1027457234_98272716'
+Started GET "/service" for 127.0.0.1 at 2019-02-01 00:38:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/service"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/services" for 127.0.0.1 at 2019-02-01 00:38:24 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (47.7ms)
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Service::Users):
+    19:       <tr>
+    20:         <td><%= service.car_name %></td>
+    21:         <td><%= service.bought_here %></td>
+    22:         <td><%= service.users %></td>
+    23:         <td><%= service.description %></td>
+    24:         <td><%= service.status %></td>
+    25:         <td><%= link_to 'Show', service %></td>
+  
+app/views/services/index.html.erb:22:in `block in _app_views_services_index_html_erb__1027457234_95303244'
+app/views/services/index.html.erb:18:in `_app_views_services_index_html_erb__1027457234_95303244'
+Started GET "/services" for 127.0.0.1 at 2019-02-01 00:38:28 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[35m (373.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mService Load (38.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (853.8ms)
+Completed 500 Internal Server Error in 1405ms (ActiveRecord: 411.7ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Service::Users):
+    19:       <tr>
+    20:         <td><%= service.car_name %></td>
+    21:         <td><%= service.bought_here %></td>
+    22:         <td><%= service.users %></td>
+    23:         <td><%= service.description %></td>
+    24:         <td><%= service.status %></td>
+    25:         <td><%= link_to 'Show', service %></td>
+  
+app/views/services/index.html.erb:22:in `block in _app_views_services_index_html_erb__1027457234_57377544'
+app/views/services/index.html.erb:18:in `_app_views_services_index_html_erb__1027457234_57377544'
+  [1m[35m (41.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('4663098154667039850', 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('4663098154667039850')[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('4663098154667039850', 0)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateServices (20190131234323)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('4663098154667039850')[0m
+  [1m[35m (26.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('4663098154667039850', 0)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateServices (20190131234323)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('4663098154667039850')[0m
+  [1m[35m (78.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (15.6ms)[0m  [1m[34mSELECT GET_LOCK('4663098154667039850', 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateServices (20190131234511)
+  [1m[35m (442.3ms)[0m  [1m[35mCREATE TABLE `services` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `car_name` varchar(255), `bought_here` tinyint(1), `user_id` int, `description` varchar(255), `status` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (430.9ms)[0m  [1m[35mCREATE  INDEX `index_services_on_user_id`  ON `services` (`user_id`) [0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190131234511')[0m
+  [1m[35m (50.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('4663098154667039850')[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-02-01 00:47:11 +0100
+  [1m[35m (338.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-02-01 00:47:16 +0100
+Processing by PagesController#index as HTML
+  [1m[35m (441.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  Rendering pages/index.html.erb within layouts/application
+  [1m[35m (33.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (381.4ms)
+Completed 500 Internal Server Error in 491ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Permission denied @ utime_failed - C:/Users/Sumejja/Desktop/draos/tmp/cache/assets/sprockets/v3.0/9_/9_gMz3iiFNED6Lm5hapJNbaPITp-H3_SCxXDAglH1mw.cache):
+    36: 	<div class="wrap">   
+    37:      <div class="header-top"> 
+    38:           <div class="logo">
+    39:         <%= image_tag("carlogoP.png", :alt => "") %>
+    40:       </div>
+    41:       <div class="clear"></div> 
+    42:       </div>
+  
+app/views/pages/index.html.erb:39:in `_app_views_pages_index_html_erb___766762355_48736740'
+  Rendered pages/index.html.erb within layouts/application (2030.4ms)
+Completed 200 OK in 2223ms (Views: 2199.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/service" for 127.0.0.1 at 2019-02-01 00:47:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/service"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/services" for 127.0.0.1 at 2019-02-01 00:47:55 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (2.2ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+Started GET "/services" for 127.0.0.1 at 2019-02-01 00:47:58 +0100
+Processing by ServicesController#index as HTML
+  Rendered services/index.html.erb within layouts/application (110.5ms)
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 641ms (Views: 599.3ms | ActiveRecord: 7.2ms)
+
+
+Completed 200 OK in 464ms (Views: 410.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 00:48:04 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 204ms (Views: 131.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 00:48:06 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 193ms (Views: 169.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 00:48:08 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  Rendered services/_form.html.erb (805.5ms)
+  Rendered services/new.html.erb within layouts/application (828.5ms)
+Completed 200 OK in 988ms (Views: 960.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 00:49:00 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 166ms (Views: 141.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/2/edit" for 127.0.0.1 at 2019-02-01 00:49:06 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 2 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  Rendered services/_form.html.erb (6.0ms)
+  Rendered services/edit.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 184ms (Views: 159.5ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/services/2" for 127.0.0.1 at 2019-02-01 00:49:15 +0100
+Processing by ServicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k5lTjRvvSmH16zFyMDObLNfBZUxmUKtYspnhfRTAnBGSkaYeZGesLLfLC5HDsd/TY2ddK3hZM2CJxAQE6BfvMw==", "service"=>{"car_name"=>"kolanovo", "bought_here"=>"1", "user_id"=>"1", "description"=>"lopolopo", "status"=>"new"}, "commit"=>"Update Service", "id"=>"2"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (52.3ms)[0m  [1m[33mUPDATE `services` SET `car_name` = 'kolanovo', `updated_at` = '2019-01-31 23:49:15' WHERE `services`.`id` = 2[0m
+  [1m[35m (47.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/services/2
+Completed 302 Found in 120ms (ActiveRecord: 100.5ms)
+
+
+Started GET "/services/2" for 127.0.0.1 at 2019-02-01 00:49:15 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 2 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 180ms (Views: 144.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 00:49:26 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 172ms (Views: 149.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 00:59:03 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 221ms (Views: 195.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 00:59:14 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  Rendered services/_form.html.erb (6.0ms)
+  Rendered services/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 237ms (Views: 202.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 00:59:17 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 236ms (Views: 199.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2019-02-01 00:59:33 +0100
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (46.9ms)
+  Rendered products/new.html.erb within layouts/application (252.0ms)
+Completed 200 OK in 489ms (Views: 388.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-01 00:59:40 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (111.4ms)
+Completed 200 OK in 257ms (Views: 230.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-01 01:00:12 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (37.3ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (68.7ms)
+Completed 200 OK in 216ms (Views: 155.7ms | ActiveRecord: 37.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2019-02-01 01:00:21 +0100
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (10.0ms)
+  Rendered products/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 180ms (Views: 154.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-01 01:00:30 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 236ms (Views: 199.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2019-02-01 01:00:54 +0100
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (12.0ms)
+  Rendered products/edit.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 232ms (Views: 179.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:01:07 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 271ms (Views: 246.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 01:01:10 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  Rendered services/_form.html.erb (11.0ms)
+  Rendered services/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 230ms (Views: 197.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:01:12 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 176ms (Views: 153.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:01:23 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 201ms (Views: 174.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:01:55 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 191ms (Views: 159.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-02-01 01:12:20 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 536ms (Views: 370.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-02-01 01:12:33 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jh9WDdmDCyxhT/wc3oHMKNu6+4ZMEa3xl9IR4gxfGKonF6OepgvtYSNvxv8tA4jXbxzD4VIYNcmsj/Sb8IhriA==", "username"=>"korisnik", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'korisnik' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 59ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:12:34 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (23.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (115.5ms)
+Completed 200 OK in 484ms (Views: 216.1ms | ActiveRecord: 23.3ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-02-01 01:12:39 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jeJoX6UocfZWounrUfGQ1g8Twmdr7NPf5HKgbHvbA3OM6p3M2qCXuxSC0wiic9Qpu7X6AHXlS+ffL0UVhwxwUQ==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:12:39 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 213ms (Views: 190.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-02-01 01:12:42 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 190ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-02-01 01:12:46 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sh1PKLFx0lBidTyLgNtV0iQVJmPY+LzHoq+zy0E5hfhLFbq7zvk0HSBVBmhzWREtkLMeBMbxJP+Z8layve722g==", "username"=>"sumejja", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'sumejja' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:12:46 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 189ms (Views: 167.5ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-02-01 01:12:50 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S9VacR2cVZInWc3r3FeSZL8mXTnxES2fCTp5BaDXwr5K3a/iYhSz32V59wgv1dabC4BlXu8YtacyZ5x8XACxnA==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:12:50 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 183ms (Views: 162.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-02-01 01:12:52 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 181ms (Views: 151.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-02-01 01:12:56 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ymz9Agz40B80Xhc2BmRqnFPbHog1JQK/rtaCIDIvzv2IUZnd7sFDT7xQr8rm9VVxelUHT7dDDLF5r9xfB/MGQ==", "username"=>"amina", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'amina' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:12:56 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 189ms (Views: 165.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/service" for 127.0.0.1 at 2019-02-01 01:13:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/service"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:13:10 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (469.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (1314.6ms)
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:13:13 +0100
+Processing by ServicesController#index as HTML
+Completed 200 OK in 3470ms (Views: 2157.1ms | ActiveRecord: 470.0ms)
+
+
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mService Load (35.6ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (918.1ms)
+Completed 200 OK in 2411ms (Views: 2323.2ms | ActiveRecord: 35.6ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-02-01 01:13:57 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UFpP9B0G73aZmH/7eLUCnv5c8gO+EeUiT2Ssqbd7hKtRUrpnYo4JO9u4RRiLN0ZhSvrKZKAYfRp0OUnQS6z3iQ==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:13:57 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 189ms (Views: 168.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-02-01 01:14:00 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 164ms (Views: 142.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-02-01 01:14:07 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hyOr4gK60ktagon1J09jYesd64fqzSu3w5X2Tc2XFqmGK15xfTI0BhiisxbUzSeeX7vT4PTEs4/4yBM0MUBliw==", "username"=>"service", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'service' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:14:07 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 194ms (Views: 169.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-02-01 01:14:15 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hyOr4gK60ktagon1J09jYesd64fqzSu3w5X2Tc2XFqmGK15xfTI0BhiisxbUzSeeX7vT4PTEs4/4yBM0MUBliw==", "username"=>"service", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'service' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:14:15 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 238ms (Views: 191.9ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/show_user%7B4%7D" for 127.0.0.1 at 2019-02-01 01:14:19 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 3 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (443.5ms)
+Completed 200 OK in 653ms (Views: 552.6ms | ActiveRecord: 32.2ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:14:26 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/index.html.erb within layouts/application (42.0ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"services"}, missing required keys: [:id]):
+    53:                <%end %>
+    54:                <% if current_user.role_id.equal?(3) %><!-- za servisera-->
+    55:                   <li><%= link_to 'Show products', show_all_url %></li>
+    56:                   <li><%= link_to 'Service', service_path %></li>
+    57:                <%end%>
+    58:                <%end%>
+    59:          <% if current_user %>
+  
+app/views/services/index.html.erb:56:in `_app_views_services_index_html_erb___491414527_78150864'
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:14:30 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/index.html.erb within layouts/application (470.6ms)
+Completed 500 Internal Server Error in 2130ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"services"}, missing required keys: [:id]):
+    53:                <%end %>
+    54:                <% if current_user.role_id.equal?(3) %><!-- za servisera-->
+    55:                   <li><%= link_to 'Show products', show_all_url %></li>
+    56:                   <li><%= link_to 'Service', service_path %></li>
+    57:                <%end%>
+    58:                <%end%>
+    59:          <% if current_user %>
+  
+app/views/services/index.html.erb:56:in `_app_views_services_index_html_erb___491414527_104378784'
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:15:07 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 237ms (Views: 210.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:15:14 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 179ms (Views: 156.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:17:52 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 219ms (Views: 187.2ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-02-01 01:22:08 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0k0fonJB1eBJVfy5HhA6FeUcKx79cAVX/90WAwQLopvTReoxDckzrQt1xlrtkn7qUboTeeN5nW/EgPN6+NzRuQ==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:22:08 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 186ms (Views: 164.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-02-01 01:22:10 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 189ms (Views: 165.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-02-01 01:22:16 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gpmDCMuPaZpiHE8e9FUry/9aPq7EHKOwyRe5lsUtWLODkXabtAeP1yA8df0H1280S/wGydoVO4jySlzvOforkQ==", "username"=>"sumejja", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'sumejja' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:22:16 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (22.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 257ms (Views: 207.9ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-01 01:22:20 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 254ms (Views: 202.8ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-02-01 01:22:26 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sATzFSqZAQPMwoEFbBTLN9AAe/fJqruN9RQUuCxygOCxDAaGVRHnTo7iu+aflo/IZKZDkNejI7XOSfHB0KXzwg==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:22:26 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 189ms (Views: 165.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-02-01 01:22:28 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 162ms (Views: 135.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-02-01 01:22:32 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c5VQZ6hsSN9qsEx8iNaw6d4IVDNtVsEnnVu5AtB8r+xynaX01+SukiiQdp97VPQWaq5sVHNfWR+mBlx7LKvczg==", "username"=>"amina", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'amina' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:22:32 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 222ms (Views: 194.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:22:34 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 418ms (Views: 161.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all_cart" for 127.0.0.1 at 2019-02-01 01:22:38 +0100
+Processing by CartsController#show_all_cart as HTML
+  Rendering carts/show_all_cart.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCart Load (26.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered carts/show_all_cart.html.erb within layouts/application (63.2ms)
+Completed 200 OK in 233ms (Views: 167.3ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/show_all_cart" for 127.0.0.1 at 2019-02-01 01:23:03 +0100
+Processing by CartsController#show_all_cart as HTML
+  Rendering carts/show_all_cart.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCart Load (43.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered carts/show_all_cart.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 232ms (Views: 163.8ms | ActiveRecord: 43.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:23:08 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 202ms (Views: 172.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all_cart" for 127.0.0.1 at 2019-02-01 01:23:11 +0100
+Processing by CartsController#show_all_cart as HTML
+  Rendering carts/show_all_cart.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCart Load (1.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered carts/show_all_cart.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 206ms (Views: 179.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/show_all_cart" for 127.0.0.1 at 2019-02-01 01:23:20 +0100
+Processing by CartsController#show_all_cart as HTML
+  Rendering carts/show_all_cart.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered carts/show_all_cart.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 219ms (Views: 189.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:23:27 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 189ms (Views: 163.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:26:14 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 192ms (Views: 167.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-02-01 01:26:24 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 195ms (Views: 155.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-02-01 01:26:34 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 304ms (Views: 276.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:27:45 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 199ms (Views: 174.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:29:19 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 190ms (Views: 163.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:29:24 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 197ms (Views: 172.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:30:33 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 194ms (Views: 169.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all_cart" for 127.0.0.1 at 2019-02-01 01:30:39 +0100
+Processing by CartsController#show_all_cart as HTML
+  Rendering carts/show_all_cart.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered carts/show_all_cart.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 197ms (Views: 171.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 01:30:41 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  Rendered services/_form.html.erb (5.0ms)
+  Rendered services/new.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 206ms (Views: 180.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:30:43 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 182ms (Views: 156.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-02-01 01:30:47 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 203ms (Views: 175.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:30:49 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 201ms (Views: 178.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:31:01 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 278ms (Views: 237.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2019-02-01 01:31:05 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 166ms (Views: 139.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 01:31:27 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  Rendered services/_form.html.erb (7.0ms)
+  Rendered services/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 198ms (Views: 175.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:31:30 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 182ms (Views: 158.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_user%7B2%7D" for 127.0.0.1 at 2019-02-01 01:32:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 226ms (Views: 191.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/show_user%7B2%7D" for 127.0.0.1 at 2019-02-01 01:32:56 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (41.3ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (81.9ms)
+Completed 200 OK in 256ms (Views: 188.0ms | ActiveRecord: 42.4ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:33:00 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 185ms (Views: 162.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_all_cart" for 127.0.0.1 at 2019-02-01 01:33:01 +0100
+Processing by CartsController#show_all_cart as HTML
+  Rendering carts/show_all_cart.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered carts/show_all_cart.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 191ms (Views: 166.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 01:33:03 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  Rendered services/_form.html.erb (5.0ms)
+  Rendered services/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 188ms (Views: 166.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:33:05 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 180ms (Views: 157.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-02-01 01:33:07 +0100
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 209ms (Views: 183.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:33:09 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 199ms (Views: 176.5ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-02-01 01:33:11 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AJoLMkahve36WzsHRYhPeruCtRd2O+2wd4llLXLpGVEBkv6hOSlboLh7AeS2CguFDySNcGgydYhM1IBUjj5qcw==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:33:11 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 331ms (Views: 286.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-02-01 01:33:13 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 259ms (Views: 215.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-02-01 01:33:18 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kVITz64hhfeGAW+wYjBDNIhS3bFgreVjs4y/ySmfkCCQWuZc0aljusQhVVORsgfLPPTl1n6kfVuI0Vqw1UjjAg==", "username"=>"sumejja", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'sumejja' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:33:18 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 191ms (Views: 164.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-01 01:33:20 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (57.1ms)
+Completed 200 OK in 236ms (Views: 205.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_user%7B3%7D" for 127.0.0.1 at 2019-02-01 01:33:22 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 194ms (Views: 166.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-01 01:33:24 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 205ms (Views: 178.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-01 01:34:02 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 225ms (Views: 198.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-01 01:34:06 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 193ms (Views: 164.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-01 01:34:29 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 210ms (Views: 182.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_user%7B3%7D" for 127.0.0.1 at 2019-02-01 01:34:32 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 182ms (Views: 157.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:34:35 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 197ms (Views: 174.4ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-02-01 01:34:37 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Up3GaZBgKjFc+KMq9kmJrM7/jMqJ8NzGK6+Bn100oF5TlTP67+jMfB7YmckFy81Telm0rZf5RP4Q8mTmoePTfA==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:34:37 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 197ms (Views: 170.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-02-01 01:34:38 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 173ms (Views: 149.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-02-01 01:34:44 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"btdYMIuvr44Tpch82BOMdWfQuG3ByE7LZsNoMKmRJCVv362j9CdJw1GF8p8rkciK03aACt/B1vNdno1JVUZXBw==", "username"=>"service", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'service' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:34:44 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 227ms (Views: 197.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_user%7B4%7D" for 127.0.0.1 at 2019-02-01 01:34:46 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 3 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (126.6ms)
+Completed 200 OK in 319ms (Views: 285.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:34:50 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 186ms (Views: 162.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:34:54 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 203ms (Views: 178.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:35:34 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 202ms (Views: 177.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:35:46 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 185ms (Views: 155.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:35:50 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 178ms (Views: 154.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_user%7B4%7D" for 127.0.0.1 at 2019-02-01 01:35:53 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 3 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 188ms (Views: 159.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:35:57 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 181ms (Views: 153.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:36:54 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 245ms (Views: 215.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:36:57 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 194ms (Views: 172.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:36:58 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 198ms (Views: 160.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_user%7B4%7D" for 127.0.0.1 at 2019-02-01 01:37:00 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 3 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 178ms (Views: 151.4ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-02-01 01:37:02 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N4MTlu3ZCSFxPoDYfu1kmWK6wlKLXqChFnx2CpbxIas2i+YFklHvbDMeujuNbyBm1hz6NZVXOJktIZNzaiZSiQ==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:37:02 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 195ms (Views: 168.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-02-01 01:43:58 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 193ms (Views: 168.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-02-01 01:44:05 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sioskNQvOBMwquICRbnFaZz07vQRMQjX5FmPCbdzPqWzItkDq6feXnKK2OG2O4GWKFLWkw84kO/fBGpwS6RNhw==", "username"=>"service", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'service' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 01:44:05 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 213ms (Views: 187.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:44:07 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 198ms (Views: 171.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 01:44:10 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (41.8ms)
+  Rendered services/new.html.erb within layouts/application (65.8ms)
+Completed 200 OK in 249ms (Views: 225.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:44:14 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 184ms (Views: 152.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 01:44:16 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 189ms (Views: 156.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:44:20 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 177ms (Views: 154.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:44:23 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/edit.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 188ms (Views: 162.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:44:25 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 179ms (Views: 155.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:45:09 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/edit.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 191ms (Views: 165.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:45:13 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 208ms (Views: 179.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:45:20 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (12.0ms)
+  Rendered services/edit.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 214ms (Views: 189.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:45:42 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (15.3ms)
+  Rendered services/edit.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 200ms (Views: 174.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:45:48 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 204ms (Views: 172.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 01:45:50 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 161ms (Views: 135.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:45:52 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 199ms (Views: 168.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 01:46:45 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 172ms (Views: 145.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:46:49 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 174ms (Views: 151.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:49:23 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 206ms (Views: 181.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 01:49:25 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 177ms (Views: 149.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:49:28 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 206ms (Views: 177.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:49:30 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/edit.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 211ms (Views: 183.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:49:34 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 199ms (Views: 168.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 01:49:59 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 190ms (Views: 156.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:50:02 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 182ms (Views: 154.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:50:04 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  Rendered services/_form.html.erb (29.9ms)
+  Rendered services/edit.html.erb within layouts/application (51.7ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/Sumejja/Desktop/draos/app/views/services/_form.html.erb:89: syntax error, unexpected tLABEL, expecting '='
+...er.append=( form.submit, class:'btn btn-success');@output_bu...
+...                               ^):
+  
+app/views/services/_form.html.erb:89: syntax error, unexpected tLABEL, expecting '='
+app/views/services/edit.html.erb:1:in `_app_views_services_edit_html_erb___874633403_104440188'
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:50:27 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (13.0ms)
+  Rendered services/edit.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 228ms (Views: 189.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:50:56 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 203ms (Views: 173.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 01:52:44 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (2.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 199ms (Views: 151.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 01:54:31 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 181ms (Views: 152.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 01:56:22 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 187ms (Views: 158.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:56:28 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 229ms (Views: 195.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 01:56:41 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 175ms (Views: 145.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:56:44 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 254ms (Views: 217.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:56:46 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (15.0ms)
+  Rendered services/edit.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 200ms (Views: 173.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:57:42 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (15.0ms)
+  Rendered services/edit.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 217ms (Views: 189.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:57:47 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 194ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:57:50 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (16.0ms)
+  Rendered services/edit.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 222ms (Views: 188.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:58:36 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 183ms (Views: 160.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:58:40 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (13.0ms)
+  Rendered services/edit.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 204ms (Views: 174.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:58:42 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 247ms (Views: 213.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 01:59:14 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 199ms (Views: 170.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:59:17 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 243ms (Views: 210.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 01:59:20 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (15.0ms)
+  Rendered services/new.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 241ms (Views: 217.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:59:23 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 213ms (Views: 182.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 01:59:25 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (16.0ms)
+  Rendered services/edit.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 211ms (Views: 181.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 01:59:28 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 219ms (Views: 179.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 01:59:57 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 172ms (Views: 143.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:00:00 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 240ms (Views: 211.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:00:01 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/edit.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 195ms (Views: 164.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:00:04 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 238ms (Views: 205.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 02:01:37 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 193ms (Views: 167.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:01:40 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 251ms (Views: 220.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 02:02:12 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (16.0ms)
+  Rendered services/new.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 207ms (Views: 170.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:02:40 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 181ms (Views: 157.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 02:02:42 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (2.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 169ms (Views: 137.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:02:48 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (2.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (12.8ms)
+  Rendered services/edit.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 217ms (Views: 168.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:02:53 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 203ms (Views: 171.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 02:02:55 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/new.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 209ms (Views: 172.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 02:04:56 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (18.0ms)
+  Rendered services/new.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 216ms (Views: 189.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 02:05:00 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 208ms (Views: 182.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:05:04 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 256ms (Views: 206.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:05:07 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (13.0ms)
+  Rendered services/edit.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 201ms (Views: 171.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:05:09 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 262ms (Views: 233.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 02:05:30 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 177ms (Views: 149.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:05:33 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 227ms (Views: 192.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:05:36 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (15.0ms)
+  Rendered services/edit.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 213ms (Views: 183.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:05:38 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 204ms (Views: 168.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 02:06:57 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (17.0ms)
+  Rendered services/new.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 227ms (Views: 199.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:07:00 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 218ms (Views: 187.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 02:07:02 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 167ms (Views: 141.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:07:05 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 244ms (Views: 216.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:07:07 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (15.0ms)
+  Rendered services/edit.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 203ms (Views: 175.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:07:09 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 210ms (Views: 177.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 02:07:26 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (13.8ms)
+  Rendered services/new.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 204ms (Views: 173.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:07:29 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 210ms (Views: 178.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 02:07:31 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 182ms (Views: 157.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:07:33 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 226ms (Views: 191.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 02:08:38 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 181ms (Views: 150.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:08:42 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 199ms (Views: 170.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:08:44 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/edit.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 198ms (Views: 171.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:13:15 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/edit.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 200ms (Views: 173.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:14:18 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (16.0ms)
+  Rendered services/edit.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 225ms (Views: 192.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:14:54 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (16.0ms)
+  Rendered services/edit.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 217ms (Views: 177.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:15:57 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (2.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (16.0ms)
+  Rendered services/edit.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 247ms (Views: 209.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:16:30 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (15.0ms)
+  Rendered services/edit.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 197ms (Views: 167.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:16:59 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (15.0ms)
+  Rendered services/edit.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 211ms (Views: 182.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:17:39 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (19.0ms)
+  Rendered services/edit.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 249ms (Views: 216.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:17:57 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/edit.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 216ms (Views: 186.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:18:43 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (18.0ms)
+  Rendered services/edit.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 210ms (Views: 181.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:19:44 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/edit.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 208ms (Views: 172.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:21:43 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (16.0ms)
+  Rendered services/edit.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 202ms (Views: 174.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:21:59 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:21:59 +0100
+Processing by ServicesController#edit as HTML
+  [1m[36mService Load (14.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (22.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (21.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (38.6ms)
+  Rendered services/edit.html.erb within layouts/application (102.9ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (23.0ms)
+  Rendered services/edit.html.erb within layouts/application (85.7ms)
+Completed 200 OK in 426ms (Views: 345.0ms | ActiveRecord: 35.0ms)
+
+
+Completed 200 OK in 419ms (Views: 327.8ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:24:15 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (14.0ms)
+  Rendered services/edit.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 205ms (Views: 177.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:24:50 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (63.6ms)
+  Rendered services/edit.html.erb within layouts/application (87.6ms)
+Completed 200 OK in 265ms (Views: 234.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:25:10 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 183ms (Views: 156.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 02:25:13 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 175ms (Views: 146.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:25:15 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 261ms (Views: 226.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2019-02-01 02:25:17 +0100
+Processing by ServicesController#new as HTML
+  Rendering services/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (16.1ms)
+  Rendered services/new.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 203ms (Views: 177.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:25:20 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 199ms (Views: 169.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:26:01 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (13.0ms)
+  Rendered services/edit.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 196ms (Views: 169.5ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/services/1" for 127.0.0.1 at 2019-02-01 02:26:15 +0100
+Processing by ServicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DSJPAY0JHhAbtAW9R2Gy2yKC6AnN5eqd1uZdueM2hjEMKrqS8oH4XVmUP1604/YkliTQbtPscqXtu7jAH+H1Ew==", "service"=>{"car_name"=>"kola", "bought_here"=>"1", "user_id"=>"1", "description"=>"opis kvara", "status"=>"new"}, "commit"=>"Update Service", "id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (99.1ms)[0m  [1m[33mUPDATE `services` SET `description` = 'opis kvara', `updated_at` = '2019-02-01 01:26:16' WHERE `services`.`id` = 1[0m
+  [1m[35m (72.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/services/1
+Completed 302 Found in 207ms (ActiveRecord: 173.3ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 02:26:16 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 192ms (Views: 154.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:26:20 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 186ms (Views: 156.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/show_user%7B4%7D" for 127.0.0.1 at 2019-02-01 02:26:24 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 3 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 183ms (Views: 156.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-02-01 02:26:27 +0100
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 200ms (Views: 169.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 02:26:28 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 193ms (Views: 166.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-02-01 02:26:35 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rMNlYdS9NRM4Kc2xpVNVbvbOApfcRRqP4aseaxcexV+ty5DyqzXTXnoJ91JW0RGRQmg68MJMgrfa9vsS68m2fQ==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 02:26:35 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 216ms (Views: 190.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-02-01 02:26:56 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 198ms (Views: 167.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-02-01 02:27:05 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oClDXixLSsqPDImHHFrg9AZsZDo68r1mBFS0EqomsDOhIbbNU8Osh80ss2Tv2KQLsspcXST7JV4/CVFrVvHDEQ==", "username"=>"service", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'service' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 02:27:05 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 211ms (Views: 185.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:27:07 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 180ms (Views: 157.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services/1/edit" for 127.0.0.1 at 2019-02-01 02:27:10 +0100
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/_form.html.erb (12.0ms)
+  Rendered services/edit.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 192ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/services/1" for 127.0.0.1 at 2019-02-01 02:27:15 +0100
+Processing by ServicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bs9S2VtMAUcz2XyR8nTiXdWoSGd4tlSpSn4PypDlmyxvx6dKJMTnCnH5RnIB9qaiYQ5wAGa/zJFxI+qzbDLoDg==", "service"=>{"car_name"=>"kola", "bought_here"=>"1", "user_id"=>"1", "description"=>"opis kvara", "status"=>"done"}, "commit"=>"Update Service", "id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (27.0ms)[0m  [1m[33mUPDATE `services` SET `status` = 'done', `updated_at` = '2019-02-01 01:27:15' WHERE `services`.`id` = 1[0m
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/services/1
+Completed 302 Found in 86ms (ActiveRecord: 69.0ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-02-01 02:27:15 +0100
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT  `services`.* FROM `services` WHERE `services`.`id` = 1 LIMIT 1[0m
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered services/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 172ms (Views: 141.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-02-01 02:27:17 +0100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 190ms (Views: 162.3ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-02-01 02:27:22 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SHczVHlimVrh2kggp9ortDcxE2I2ixYRCcG2h1CwJThJf8bHBup/F6P6csNUWG9Lg5crBSiCjikynFP+rGdWGg==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-01 02:27:22 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 182ms (Views: 159.4ms | ActiveRecord: 0.0ms)
+
+
