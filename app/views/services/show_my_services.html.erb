@@ -73,46 +73,47 @@
 <div class="row" style="margin: 0 1px 0 0; padding: 6% 0px 16.1%; overflow-y:hidden;background-color: seagreen;">
 
 <div class="container">
-<h1 style="color:white">Services</h1>
+<div class="row">
+  <div class="col-sm-2 col-md-1"></div>
+  <div class="col-sm-4 col-md-5">
+    <h1 style="color:white">Services</h1>
+  </div>
+  <div class="col-sm-4 col-md-5">
+    <button type="button" class="btn btn-light pull-right"><%= link_to 'New service', new_service_path %></button>
+  </div>
+  <div class="col-sm-2 col-md-1"></div>
+</div>
 
 <table class="table table-bordered" style="background-color:white; width:90%; margin:auto;">
   <thead>
     <tr>
       <th>Car name</th>
       <th>Bought here</th>
-      <th>User</th>
       <th>Description</th>
       <th>Status</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
     <tbody>
     <% @services.each do |service| %>
-      <tr>
-        <td><%= service.car_name %></td>
-        <td><%= service.bought_here %></td>
-        <td><%= service.user_id %></td>
-        <td><%= service.description %></td>
-        <% if service.status == 'new' %>
-        <td><%= service.status %>   <span class="glyphicon glyphicon-exclamation-sign" style="color:red" data-toggle="tooltip" data-placement="left" title="Not started!"></span></td>
-        <% elsif service.status == 'done'%>
-        <td><%= service.status %>   <span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" title="Finished, car fixed!"></span></td>
-        <% else %>
-        <td><%= service.status %>   <span class="glyphicon glyphicon-exclamation-sign" style="color:yellow" data-toggle="tooltip" data-placement="left" title="In progress!"></span></td>
-        <% end %>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% if current_user.id.equal?(service.user_id)%>
+          <tr>
+          <td><%= service.car_name %></td>
+          <td><%= service.bought_here %></td>
+          <td><%= service.description %></td>
+          <% if service.status == 'new' %>
+          <td><%= service.status %>   <span class="glyphicon glyphicon-exclamation-sign" style="color:red" data-toggle="tooltip" data-placement="left" title="Not started!"></span></td>
+          <% elsif service.status == 'done'%>
+          <td><%= service.status %>   <span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" title="Finished, car fixed!"></span></td>
+          <% else %>
+          <td><%= service.status %>   <span class="glyphicon glyphicon-exclamation-sign" style="color:yellow" data-toggle="tooltip" data-placement="left" title="In progress!"></span></td>
+          <% end %>
+        </tr>
+      <% end %>
     <% end %>
 
   </tbody>
 </table>
-
-<br>
-
-<button type="button" class="btn btn-light"><%= link_to 'New service', new_service_path %></button>
 
 </div>
 </div>

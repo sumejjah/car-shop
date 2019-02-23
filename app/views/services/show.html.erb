@@ -20,7 +20,7 @@
                    <li><%= link_to 'My previous orders', show_all_history_url %></li>
                    <li><%= link_to 'Show products', show_all_url %></li>
                    <li><%= link_to 'Cart', show_all_cart_url %></li>
-                   <li class="active"><%= link_to 'Service', new_service_path %></li>
+                   <li class="active"><%= link_to 'My services', show_my_services_path %></li>
                <%end %>
                <% if current_user.role_id.equal?(3) %><!-- za servisera-->
                   <li><%= link_to 'Show products', show_all_url %></li>
@@ -75,17 +75,24 @@
   </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-3 col-md-4 col-lg-5"></div>
-  <div class="col-sm-3 col-md-2 col-lg-1">
-    <button type="button" class="btn btn-default">
-    <%= link_to 'Back', services_path %>
+<div class="container">
+  <div class="row">
+  <div class="col-sm-3 col-md-3 col-lg-3"></div>
+  <div class="col-sm-3 col-md-3 col-lg-3">
+    <button type="button" class="btn btn-default float-right">
+    <% if current_user.role_id.equal?(2) %>
+      <%= link_to 'Show my services', show_my_services_path %>
+    <%end %>
+    <% if current_user.role_id.equal?(3) %>
+      <%= link_to 'Back', services_path %>
+    <%end%>  
     </button>
   </div>
-  <div class="col-sm-3 col-md-2 col-lg-1">
-    <button type="button" class="btn btn-default">
+  <div class="col-sm-3 col-md-3 col-lg-3">
+    <button type="button" class="btn btn-default float-left">
     <%= link_to 'Edit', edit_service_path(@service) %>
     </button>
   </div>
-  <div class="col-sm-3 col-md-4 col-lg-5"></div>
+  <div class="col-sm-3 col-md-3 col-lg-3"></div>
+</div>
 </div>
