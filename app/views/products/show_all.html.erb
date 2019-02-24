@@ -36,7 +36,8 @@ end %>
   <div class="wrap">   
      <div class="header-top"> 
           <div class="logo">
-        <%= image_tag("carlogoP.png", :alt => "") %>
+        <img src="/assets/l.png"  style="height: 150px; display: inline; ">
+        <h2 style="display: inline;"> The Car Shop </h2>
       </div>
       <div class="clear"></div> 
       </div>
@@ -79,8 +80,18 @@ end %>
 <div class="panel panel-info col-md-10 col-sm-offset-1 ">
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
- 
+<div>
+  <h1 style="padding-bottom: 40px">Products</h1>
+</div>
+
+<div style="padding-bottom: 50px">
+  <h4>Search by name:</h4>
+  <%= form_tag(show_all_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag ("Search") %>
+  <% end %>
+</div>
+
 <table class="table table-bordered">
   <thead>
     <tr>
