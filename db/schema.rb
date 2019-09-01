@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20190131234511) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "price", limit: 24
-    t.string "image", limit: 10000
+    t.string "image"
     t.integer "quantity"
     t.string "picture"
   end

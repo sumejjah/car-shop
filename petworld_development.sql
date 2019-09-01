@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 23, 2018 at 03:03 PM
--- Server version: 5.7.19
--- PHP Version: 5.6.31
+-- Generation Time: Sep 01, 2019 at 07:51 PM
+-- Server version: 5.7.26
+-- PHP Version: 7.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -61,7 +61,18 @@ CREATE TABLE IF NOT EXISTS `carts` (
   PRIMARY KEY (`id`),
   KEY `index_carts_on_user_id` (`user_id`),
   KEY `index_carts_on_product_id` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `carts`
+--
+
+INSERT INTO `carts` (`id`, `user_id`, `product_id`, `quantity`, `created_at`, `updated_at`) VALUES
+(25, 2, 3, 1, '2019-09-01 14:19:58', '2019-09-01 14:19:58'),
+(26, 2, 3, 1, '2019-09-01 14:19:58', '2019-09-01 14:19:58'),
+(27, 2, 3, 1, '2019-09-01 14:19:59', '2019-09-01 14:19:59'),
+(28, 4, 7, 1, '2019-09-01 16:50:15', '2019-09-01 16:50:15'),
+(29, 4, 12, 1, '2019-09-01 16:50:32', '2019-09-01 16:50:32');
 
 -- --------------------------------------------------------
 
@@ -81,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `histories` (
   PRIMARY KEY (`id`),
   KEY `index_histories_on_user_id` (`user_id`),
   KEY `index_histories_on_product_id` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `histories`
@@ -98,7 +109,23 @@ INSERT INTO `histories` (`id`, `user_id`, `product_id`, `quantity`, `date`, `cre
 (8, 3, 5, 1, '2018-05-23', '2018-05-23 14:38:10', '2018-05-23 14:38:10'),
 (9, 3, 4, 1, '2018-05-23', '2018-05-23 14:38:11', '2018-05-23 14:38:11'),
 (10, 3, 3, 1, '2018-05-23', '2018-05-23 14:46:00', '2018-05-23 14:46:00'),
-(11, 3, 2, 1, '2018-05-23', '2018-05-23 14:46:00', '2018-05-23 14:46:00');
+(11, 3, 2, 1, '2018-05-23', '2018-05-23 14:46:00', '2018-05-23 14:46:00'),
+(12, 4, 3, 1, '2019-09-01', '2019-09-01 14:18:46', '2019-09-01 14:18:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newtests`
+--
+
+DROP TABLE IF EXISTS `newtests`;
+CREATE TABLE IF NOT EXISTS `newtests` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -116,18 +143,28 @@ CREATE TABLE IF NOT EXISTS `products` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `price` float DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
+  `picture` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `description`, `availability`, `code`, `created_at`, `updated_at`, `price`) VALUES
-(2, 'aspirin', 'plus c', 1, 123, '2018-05-06 11:45:17', '2018-05-06 11:45:17', 3.4),
-(3, 'Češalj', 'Mekani češalj za vašeg ljubimca.', 1, 456, '2018-05-17 00:00:00', '2018-05-17 00:00:00', 6.7),
-(4, 'Šampon', 'Ovo će biti novi omiljeni šampon vašeg ljubimca.', 1, 789, '2018-05-17 00:00:00', '2018-05-17 00:00:00', 3.8),
-(5, 'Kupka za pse', 'Najnoviji proizvod na tržištu. Ovo je kupka čiji će miris oduševiti vašeg psa.', 1, 147, '2018-05-17 00:00:00', '2018-05-17 00:00:00', 7.2);
+INSERT INTO `products` (`id`, `name`, `description`, `availability`, `code`, `created_at`, `updated_at`, `price`, `image`, `quantity`, `picture`) VALUES
+(2, 'Honda Accord', 'The versatile, family-friendly CR-V should be at the top of any compact crossover shopping list.', 1, 123, '2018-05-06 11:45:17', '2018-05-06 11:45:17', 120000, 'https://www.nfcworld.com/wp-content/uploads/2016/07/alibabacar200.jpg', 0, NULL),
+(3, 'Subaru Foresterrr', 'Redesigned for 2019, the RAV4 gets serious upgrades to power, in-car tech and available features.', 1, 456, '2018-05-17 00:00:00', '2019-09-01 14:21:02', 450000, 'http://pngimg.com/uploads/alfa_romeo/alfa_romeo_PNG76.png', 2, NULL),
+(4, 'Mazda MX-5', 'With an updated look and more standard safety features, the 2019 Civic is a clear class leader.', 1, 788, '2018-05-17 00:00:00', '2019-09-01 14:22:34', 920000, 'https://img.icons8.com/bubbles/2x/car.png', 3, NULL),
+(5, 'Mitsubishi Carisma', 'The three-row SUV segment is highly competitive, and the Highlander is right in the mix.\r\n\r\n', 1, 145, '2018-05-17 00:00:00', '2018-05-17 00:00:00', 620000, NULL, 33, NULL),
+(6, 'Toyota Yaris', 'An excellent combination of performance, comfort and utility makes the CX-5 a standout SUV.', 1, 124, '2018-05-06 11:45:17', '2018-05-06 11:45:17', 150000, NULL, 44, NULL),
+(7, 'Honda Civic', 'The Accord is a perennial favorite in the midsize class, and this newest model is no different.', 1, 458, '2018-05-17 00:00:00', '2018-05-17 00:00:00', 350000, NULL, 6, NULL),
+(8, 'Nissan Almera', 'From workhorse to polo pony, the 2019 Ram 1500 adapts to whatever you require from a truck.', 1, 781, '2018-05-17 00:00:00', '2018-05-17 00:00:00', 690000, NULL, 23, NULL),
+(9, 'Honda CR-V', 'The Equinox isn\'t class-leading, but you\'ll like its luxury features and performance.', 1, 149, '2018-05-17 00:00:00', '2018-05-17 00:00:00', 520000, NULL, 66, NULL),
+(10, 'Toyota RAV4', 'The all-new Telluride has much to offer shoppers looking for a versatile and upscale three-row SUV.', 1, 455, '2018-05-17 00:00:00', '2018-05-17 00:00:00', 450000, NULL, 44, NULL),
+(11, 'Nissan Micra', 'The 2019 Chevrolet Traverse is one of the roomiest three-row crossovers SUVs you\'ll find.', 1, 785, '2018-05-17 00:00:00', '2018-05-17 00:00:00', 370000, NULL, 4, NULL),
+(12, 'Lexus IS 200', 'It isn\'t exactly refined, but the Tacoma is one of the world\'s most capable trucks, on- or off-road.', 1, 142, '2018-05-17 00:00:00', '2018-05-17 00:00:00', 840000, 'https://www.nfcworld.com/wp-content/uploads/2016/07/alibabacar200.jpg', 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -142,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `roles`
@@ -150,7 +187,8 @@ CREATE TABLE IF NOT EXISTS `roles` (
 
 INSERT INTO `roles` (`id`, `role_name`, `created_at`, `updated_at`) VALUES
 (1, 'Employee', '2018-05-01 00:00:00', '2018-05-06 00:00:00'),
-(2, 'Client', '2018-05-02 00:00:00', '2018-05-06 00:00:00');
+(2, 'Client', '2018-05-02 00:00:00', '2018-05-06 00:00:00'),
+(3, 'Serviser', '2019-09-01 00:00:00', '2019-09-01 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -174,7 +212,41 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180506113755'),
 ('20180515204456'),
 ('20180515204916'),
-('20180517023422');
+('20180517023422'),
+('20180523211709'),
+('20180527194758'),
+('20180531123227'),
+('20180601193116'),
+('20190131234511');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+DROP TABLE IF EXISTS `services`;
+CREATE TABLE IF NOT EXISTS `services` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `car_name` varchar(255) DEFAULT NULL,
+  `bought_here` tinyint(1) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_services_on_user_id` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `car_name`, `bought_here`, `user_id`, `description`, `status`, `created_at`, `updated_at`) VALUES
+(2, 'Honda', 0, 3, 'broken door', 'new', '2019-09-01 16:56:10', '2019-09-01 16:59:54'),
+(4, 'Megan', 1, 3, 'broken window', 'in progress', '2019-09-01 17:01:14', '2019-09-01 17:01:14'),
+(5, 'BMW', 1, 4, 'can\'t open door', 'done', '2019-09-01 17:02:14', '2019-09-01 17:02:14');
 
 -- --------------------------------------------------------
 
@@ -201,7 +273,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `full_name`, `username`, `password`, `role_id`, `created_at`, `updated_at`) VALUES
 (2, 'Amina Mahmutovic', 'amina1', 'pass', 1, '2018-05-06 12:38:23', '2018-05-06 12:38:23'),
-(3, 'Sumejja Halilovic', 'sumejja1', 'pass', 2, '2018-05-06 12:48:26', '2018-05-06 12:48:26'),
+(3, 'Sumejja Halilovic', 'sumejja1', 'pass', 3, '2018-05-06 12:48:26', '2018-05-06 12:48:26'),
 (4, 'Delila Halilović', 'delila1', 'pass', 2, '2018-05-19 11:34:25', '2018-05-19 11:34:25');
 
 --

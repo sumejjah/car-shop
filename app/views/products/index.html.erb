@@ -81,7 +81,8 @@ end %>
       	<th>Description</th>
       	<th>Quantity</th>
 		    <th>Code</th>
-      	<th colspan="3"></th>
+        <th>Price $</th>
+      	<th colspan="2"></th>
       	<th>Status</th>
     </tr>
   </thead>
@@ -92,22 +93,21 @@ end %>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.quantity %></td>
-		<td><%= product.code %></td>
-		
-			
+		    <td><%= product.code %></td>
+		    <td><%= product.price %></td>			
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
 
         <% if product.quantity > get_availability(product.id) %>
         	<td><span class="glyphicon glyphicon-ok" style="color:green" data-toggle="tooltip" data-placement="left" 
-        		title="Dovoljno na stanju"></span></td>
+        		title="Available"></span></td>
         
         <%elsif product.quantity < 0.50 * get_availability(product.id) %>
-        	<td><span class="glyphicon glyphicon-exclamation-sign" style="color:red" data-toggle="tooltip" data-placement="left" title="Podhitno naruciti! Dostupnost proizvoda manja od 50% u odnosu na potražnju tokom proslog mjeseca!"></span></td> 
+        	<td><span class="glyphicon glyphicon-exclamation-sign" style="color:red" data-toggle="tooltip" data-placement="left" title="Order urgently! Product availability less than 50% over last month's demand!"></span></td> 
 
         <%else %>
-        	<td><span class="glyphicon glyphicon-exclamation-sign" style="color:orange" data-toggle="tooltip" data-placement="left" title="Potrebno naruciti Dostupnost proizvoda manja od potražnje u prošlom mjesecu!"></span></td>
+        	<td><span class="glyphicon glyphicon-exclamation-sign" style="color:orange" data-toggle="tooltip" data-placement="left" title="Needed to order! Product availability less than last month's demand!"></span></td>
         <%end %>
 
       </tr>
