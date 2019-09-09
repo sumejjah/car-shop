@@ -45,9 +45,9 @@
 
 <div class="container">
 <div class="row">
-        <div class="col-md-2">
-  <img src="https://img.icons8.com/bubbles/100/000000/car.png">
-</div>
+  <div class="col-md-6">
+    <%= image_tag("carlist"+@product.id.to_s+".jpg", alt: "") %>
+  </div>
   <div class="col-md-6">
   <form>
   <p id="notice"><%= notice %></p>
@@ -88,6 +88,8 @@
 </p>
     </div>
   </form>
+
+  
   </div>
   </div>
   </div>
@@ -107,21 +109,19 @@
       </button>
     <%end%>
   </div>
-
-  <div class="col-sm-4 col-md-5"></div>
-
-  <div class="col-sm-4 col-md-1">
+  
+  <div class="col-md-2">
     <%if current_user.role_id.equal?(1) %>
       <button type="button" class="btn btn-default">
       <%= link_to 'Edit', edit_product_path(@product) %> 
       </button>
     <%end%>
-  </div>
-  
-  <div class="col-sm-4 col-md-1">
+
+  <% if current_user.role_id.equal?(2) %>
     <button type="button" class="btn btn-default">
     <%= link_to "Add to cart", add_to_cart_url(:id => @product.id, :user_id => current_user.id), class: "button" %>
     </button>
+  <% end %>
   </div>
   <div class="col-sm-4 col-md-2"></div>
 </div>

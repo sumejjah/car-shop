@@ -105,7 +105,18 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-2 col-md-2 col-lg-4"></div>
+    <div class="col-sm-2 col-md-2 col-lg-4">
+      <%if current_user.role_id.equal?(2) %>
+      <button type="button" class="btn btn-default" style="margin-top:0px;">
+        <%= link_to 'Back', show_my_services_path%>
+      </button>
+      <% end %>
+    <%else if current_user.role_id.equal?(3) %>
+      <button type="button" class="btn btn-default" style="margin-top:0px;">
+      <%= link_to 'Back', services_path %>
+      </button>
+    <%end%>
+    </div>
     <div class="col-sm-10 col-md-10 col-lg-8">
         <%= form.submit %>
     </div>

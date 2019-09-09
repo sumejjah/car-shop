@@ -58,7 +58,7 @@ end %>
                    <li><%= link_to 'My services', show_my_services_path %></li>
                <%end %>
                <% if current_user.role_id.equal?(3) %><!-- za servisera-->
-                  <li class="active"><%= link_to 'Show products', show_all_url %></li>
+                  <!--<li class="active"><%= link_to 'Show products', show_all_url %></li>-->
                   <li><%= link_to 'Service', services_path %></li>
                <%end%>              
                <%end%>
@@ -92,13 +92,21 @@ end %>
   <% end %>
 </div>
 
+<div style="padding-bottom: 50px">
+  <h4>Search by color:</h4>
+  <%= form_tag(show_all_path, method: :get) do %>
+    <%= text_field_tag(:color, params[:color]) %>
+    <%= submit_tag ("Search") %>
+  <% end %>
+</div>
+
 <table class="table table-bordered">
   <thead>
     <tr>
       
       <th>Name</th>
-      <th>Description</th>
       <th>Picture</th>
+      <th>Description</th>
       <th>Code</th>
       <th>Price</th>
       <th>Quantity</th>

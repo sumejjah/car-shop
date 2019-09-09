@@ -9,4 +9,7 @@ def self.search(search)
 		Product.all
 	end
 end
+
+scope :color, -> (color) { where color: color }
+
 end

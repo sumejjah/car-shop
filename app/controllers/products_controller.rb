@@ -46,6 +46,7 @@ class ProductsController < ApplicationController
  
   def show_all
       @products = Product.search(params[:search])
+      @products = @products.color(params[:color]) if params[:color].present?
   end
 
     def show_picked
