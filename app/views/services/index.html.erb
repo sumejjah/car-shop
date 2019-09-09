@@ -32,7 +32,7 @@
      <div class="header-top"> 
           <div class="logo">
 <img src="/assets/l.png"  style="height: 150px; display: inline; ">
-        <h2 style="display: inline;"> The Car Shop </h2>      </div>
+        <h2 class = "mojFont" style="display: inline; margin: 160px;"> The Car Shop </h2>      </div>
       <div class="clear"></div> 
       </div>
   </div>
@@ -52,7 +52,6 @@
                    <li class="active"><%= link_to 'My services', show_my_services_path %></li>
                <%end %>
                <% if current_user.role_id.equal?(3) %><!-- za servisera-->
-                  <li><%= link_to 'Show products', show_all_url %></li>
                   <li class="active"><%= link_to 'Service', services_path %></li>
                <%end%>
                <%end%>
@@ -70,7 +69,7 @@
   </div>
   </div>
 </div>
-<div class="row" style="margin: 0 1px 0 0; padding: 6% 0px 16.1%; overflow-y:hidden;background-color: seagreen;">
+<div class="row" style="margin: 0 1px 0 0; padding: 6% 0px 16.1%; overflow-y:hidden;">
 
 <div class="container">
 <h1 style="color:white">Services</h1>

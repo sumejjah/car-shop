@@ -3,7 +3,6 @@
 }
 .theme-default .nivoSlider {
 	position:relative;
-	background:#fff url("loading.gif") no-repeat 50% 50%; 
 }
 .theme-default .nivoSlider img {
 	position:absolute;
@@ -23,14 +22,13 @@
 	display:inline-block;
 	width:15px;
 	height:15px;
-	background:#FFF;
 	border-radius:2em;
 	text-indent:-9999px;
 	border:0;
 	margin:0 4px;
 }
 .theme-default .nivo-controlNav a.active,.theme-default .nivo-controlNav a:hover{
-	background:#E3F7CE;
+	
 }
 .theme-default .nivo-directionNav a {
 	display:block;

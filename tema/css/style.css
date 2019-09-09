@@ -113,7 +113,7 @@ h5.ph-no{
 }
 #cssmenu li.active a, #cssmenu li a:hover{
 	color:#fff;
-	background:rgba(7, 105, 43, 0.38);
+	background:red;
 }
 #cssmenu > ul > li > ul {
   opacity: 0;
@@ -198,7 +198,7 @@ h5.ph-no{
   visibility: visible;
 }
 #cssmenu ul ul a:hover {
-  background-color:#E3F7CE;
+  background-color:black;
   color: #000;
 }
 /*--content--*/
@@ -239,7 +239,7 @@ h5.head{
 	line-height: 1.5em;
 }
 .btn-6a {
-	border: 4px solid #E3F7CE;
+	border: 4px solid;
 }
 .btn-6 {
 	color: #FFF;
@@ -268,7 +268,7 @@ h5.head{
 	color:#000;
 }
 .top-box{
-	background:#E3F7CE;
+	background:black;
 }
 .content-top{
 	padding: 6% 0 6%;
@@ -462,7 +462,7 @@ ul.follow_icon{
 	font-family: 'Roboto Condensed', sans-serif;
 }
 .copy p a{
-	color:#E3F7CE;
+	color:black;
 }
 .copy p a:hover{
 	color:#fff;

@@ -30,7 +30,7 @@
 	margin:0 4px;
 }
 .theme-default .nivo-controlNav a.active,.theme-default .nivo-controlNav a:hover{
-	background:#E3F7CE;
+	background:black;
 }
 .theme-default .nivo-directionNav a {
 	display:block;

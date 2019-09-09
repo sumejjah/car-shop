@@ -31,13 +31,13 @@ end %>
 </head>
 <body>
 
-<div class="container">
+<div class="container" >
 <div class="header">
 	<div class="wrap">   
      <div class="header-top"> 
           <div class="logo">
 <img src="/assets/l.png"  style="height: 150px; display: inline; ">
-        <h2 style="display: inline;"> The Car Shop </h2>      </div>
+        <h2 class = "mojFont" style="display: inline; margin: 160px;"> The Car Shop </h2>      </div>
       <div class="clear"></div> 
       </div>
   </div>
@@ -57,7 +57,7 @@ end %>
                    <li><%= link_to 'My services', show_my_services_path %></li>
                <%end %>
                <% if current_user.role_id.equal?(3) %><!-- za servisera-->
-                  <li><%= link_to 'Show products', show_all_url %></li>
+                  
                   <li><%= link_to 'Service', services_path %></li>
                <%end%>              
                <%end%>
@@ -76,7 +76,7 @@ end %>
    </div>
 </div>
 	<!------ Slider ------------>
-		 <div class="slider col-md-12" style="background-color:seagreen;">
+		 <div class="slider col-md-12">
 	      	<div class="slider-wrapper theme-default col-md-8" style="padding:20px;margin-left:-15px;">
 	            <div id="slider" class="nivoSlider">
 					<%= image_tag("car.jpg", alt: "") %>
@@ -86,7 +86,7 @@ end %>
 		   </div>
 		   <div class="slider-wrapper theme-default col-md-4" style="float:left;">
 				   <h2 style="padding:30px 30px 0px 30px; " class="mojFont">
-				   Welcome to The Car Shop! 
+				   Welcome! 
 				   <h2>
 				   <h3 class="mojFontContent">
 				   Shop from our inventory of over 45,000 used cars in more than 150 locations.
@@ -94,7 +94,7 @@ end %>
 		   </div>
          </div>
   <!------End Slider ------------>
- 	<div class="main">
+ 	<div class="main" style="background: white; background-color: white;">
  	 <div class="top-box">
 	  <div class="wrap">
 		 <div class="content-top">
