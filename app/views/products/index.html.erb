@@ -90,6 +90,7 @@ end %>
   <tbody>
     <% @products.each do |product| %>
       <tr>
+        <td style="width:200px"><%= image_tag("carlist"+product.id.to_s+".jpg", alt: "") %></td>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.quantity %></td>
