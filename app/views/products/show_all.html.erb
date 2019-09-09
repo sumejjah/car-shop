@@ -83,21 +83,24 @@ end %>
 <div>
   <h1 style="padding-bottom: 40px">Products</h1>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" style="padding-bottom: 50px">
+      <h4>Search by name:</h4>
+      <%= form_tag(show_all_path, method: :get) do %>
+        <%= text_field_tag(:search, params[:search]) %>
+        <%= submit_tag ("Search") %>
+      <% end %>
+    </div>
 
-<div style="padding-bottom: 50px">
-  <h4>Search by name:</h4>
-  <%= form_tag(show_all_path, method: :get) do %>
-    <%= text_field_tag(:search, params[:search]) %>
-    <%= submit_tag ("Search") %>
-  <% end %>
-</div>
-
-<div style="padding-bottom: 50px">
-  <h4>Search by color:</h4>
-  <%= form_tag(show_all_path, method: :get) do %>
-    <%= text_field_tag(:color, params[:color]) %>
-    <%= submit_tag ("Search") %>
-  <% end %>
+    <div class="col-md-3" style="padding-bottom: 50px">
+      <h4>Search by color:</h4>
+      <%= form_tag(show_all_path, method: :get) do %>
+        <%= text_field_tag(:color, params[:color]) %>
+        <%= submit_tag ("Search") %>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <table class="table table-bordered">

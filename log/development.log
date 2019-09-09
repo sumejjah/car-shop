@@ -13227,3 +13227,1542 @@ Processing by ServicesController#index as HTML
 Completed 200 OK in 286ms (Views: 248.8ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-09-09 18:29:47 +0200
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2949.3ms)
+Completed 200 OK in 3224ms (Views: 3175.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('4663098154667039850', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4663098154667039850')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/sessions/new" for 127.0.0.1 at 2019-09-09 18:31:41 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 274ms (Views: 240.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-09-09 18:31:54 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9X1o1x/VcYyt45ogUKF8xFhCQzwDD+E7i2Rk2umgKeZ/r2AY9v1uL1BqnOnhj/Zc4FFopIt7K42JDMNxbW7tvQ==", "username"=>"amina1", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'amina1' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-09 18:31:54 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (56.4ms)
+Completed 200 OK in 286ms (Views: 254.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:31:59 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (2.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (148.4ms)
+Completed 200 OK in 391ms (Views: 335.1ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:36:50 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (104.8ms)
+Completed 200 OK in 347ms (Views: 313.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:37:32 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.1ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (111.0ms)
+Completed 200 OK in 391ms (Views: 351.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:38:35 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (98.5ms)
+Completed 200 OK in 336ms (Views: 297.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:39:34 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (125.5ms)
+Completed 200 OK in 405ms (Views: 356.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:39:39 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (97.9ms)
+Completed 200 OK in 343ms (Views: 302.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:40:00 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (94.3ms)
+Completed 200 OK in 380ms (Views: 330.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:40:26 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (117.3ms)
+Completed 200 OK in 384ms (Views: 340.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:41:06 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.7ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (106.9ms)
+Completed 200 OK in 337ms (Views: 303.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:44:42 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.7ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (130.8ms)
+Completed 200 OK in 390ms (Views: 349.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:46:24 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.9ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (169.5ms)
+Completed 200 OK in 512ms (Views: 459.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:47:46 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (118.1ms)
+Completed 200 OK in 364ms (Views: 325.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:48:33 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (118.5ms)
+Completed 200 OK in 358ms (Views: 319.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:49:48 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (125.1ms)
+Completed 200 OK in 428ms (Views: 379.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:52:08 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (123.6ms)
+Completed 200 OK in 367ms (Views: 328.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:53:40 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.8ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 383ms (Views: 332.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:54:38 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (96.2ms)
+Completed 200 OK in 357ms (Views: 318.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:54:55 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (138.1ms)
+Completed 200 OK in 396ms (Views: 358.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:56:00 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.7ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (114.6ms)
+Completed 200 OK in 352ms (Views: 313.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:56:13 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (116.2ms)
+Completed 200 OK in 365ms (Views: 328.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products/3/edit" for 127.0.0.1 at 2019-09-09 18:57:50 +0200
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/_form.html.erb (117.2ms)
+  Rendered products/edit.html.erb within layouts/application (152.2ms)
+Completed 200 OK in 415ms (Views: 369.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:58:00 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.1ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (127.2ms)
+Completed 200 OK in 353ms (Views: 322.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 18:58:03 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 278ms (Views: 229.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 18:58:48 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 358ms (Views: 317.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 18:58:52 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 264ms (Views: 217.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 18:59:36 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 254ms (Views: 218.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 18:59:56 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 268ms (Views: 231.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:00:06 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 283ms (Views: 232.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:00:35 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 350ms (Views: 280.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:00:57 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 306ms (Views: 254.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:01:18 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 286ms (Views: 231.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:01:27 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 282ms (Views: 232.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:03:35 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 319ms (Views: 266.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:06:00 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 269ms (Views: 224.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:06:12 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 274ms (Views: 209.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:06:53 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 253ms (Views: 218.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:07:36 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 282ms (Views: 232.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:08:21 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 300ms (Views: 249.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:08:40 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 259ms (Views: 211.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:09:22 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 283ms (Views: 232.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:09:31 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 266ms (Views: 229.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:11:04 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 282ms (Views: 223.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:11:32 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 458ms (Views: 387.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:11:55 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 282ms (Views: 233.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:12:26 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 307ms (Views: 257.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:12:29 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 267ms (Views: 217.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:12:35 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 265ms (Views: 226.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:12:55 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 274ms (Views: 226.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:13:11 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 265ms (Views: 228.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:13:47 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 271ms (Views: 225.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2019-09-09 19:14:13 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 256ms (Views: 219.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2019-09-09 19:14:17 +0200
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/_form.html.erb (11.9ms)
+  Rendered products/edit.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 301ms (Views: 253.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 19:14:23 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (118.0ms)
+Completed 200 OK in 374ms (Views: 330.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products/11" for 127.0.0.1 at 2019-09-09 19:14:28 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 11 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 285ms (Views: 234.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 19:15:06 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.7ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.2ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (158.0ms)
+Completed 200 OK in 484ms (Views: 436.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/products/3/edit" for 127.0.0.1 at 2019-09-09 19:15:09 +0200
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/_form.html.erb (11.6ms)
+  Rendered products/edit.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 288ms (Views: 241.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products/3/edit" for 127.0.0.1 at 2019-09-09 19:16:38 +0200
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/_form.html.erb (11.6ms)
+  Rendered products/edit.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 324ms (Views: 269.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 19:16:42 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (110.2ms)
+Completed 200 OK in 344ms (Views: 308.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/products/12" for 127.0.0.1 at 2019-09-09 19:16:46 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 12 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 263ms (Views: 216.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/12" for 127.0.0.1 at 2019-09-09 19:17:17 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 12 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 262ms (Views: 212.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/12/edit" for 127.0.0.1 at 2019-09-09 19:17:23 +0200
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 12 LIMIT 1[0m
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/_form.html.erb (11.3ms)
+  Rendered products/edit.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 327ms (Views: 271.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 19:17:32 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.1ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (106.2ms)
+Completed 200 OK in 370ms (Views: 323.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/show_user%7B2%7D" for 127.0.0.1 at 2019-09-09 19:17:48 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (62.3ms)
+Completed 200 OK in 289ms (Views: 251.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-09-09 19:17:57 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mCACHE History Load (0.0ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  Rendered products/index.html.erb within layouts/application (131.4ms)
+Completed 200 OK in 394ms (Views: 354.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2019-09-09 19:18:00 +0200
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered products/_form.html.erb (11.4ms)
+  Rendered products/new.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 351ms (Views: 306.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sessions/current" for 127.0.0.1 at 2019-09-09 19:18:05 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YhHKOxR4FWP+q5hJBQNCS5+quhYp2VWBomhyk5MQGlnow8L0/VAKwAMinoC0LcjTJ7mRjqGtnzegANU4F97eAg==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-09 19:18:05 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 270ms (Views: 234.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2019-09-09 19:18:07 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 233ms (Views: 202.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-09-09 19:18:12 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0ajgh/hZZCIIZ/4ZF5YQy/Xq6/5qbYT/nJc0vSWcEKlbeuhIEXF7gfXu+NCmuJpTTfnAZuIZTkme/5MWoVLU8g==", "username"=>"delila1", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'delila1' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-09 19:18:13 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 300ms (Views: 259.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/show_all_history" for 127.0.0.1 at 2019-09-09 19:18:17 +0200
+Processing by HistoriesController#show_all_history as HTML
+  Rendering histories/show_all_history.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT `histories`.* FROM `histories`[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered histories/show_all_history.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 281ms (Views: 227.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:18:21 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 304ms (Views: 264.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:19:48 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (67.8ms)
+Completed 200 OK in 347ms (Views: 302.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:20:36 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 308ms (Views: 271.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:21:04 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (80.6ms)
+Completed 200 OK in 371ms (Views: 327.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:21:13 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 312ms (Views: 279.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:24:05 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (48.0ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     99:         <%= text_field_tag(:color, params[:color]) %>
+    100:         <%= submit_tag ("Search") %>
+    101:       <% end %>
+    102:       <% form_for @entry do |f| %>
+    103:         <%= f.text_field :color %>
+    104:         <%= f.select :color, [['Red','red'],['White','white'],['Black','black'], ['Green','green'], ['Grey','grey']] %>
+    105:         <%= f.submit %>
+  
+app/views/products/show_all.html.erb:102:in `_app_views_products_show_all_html_erb__698249812_110949820'
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:26:44 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 11[0m
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 11[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 11[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 11[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 11[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 11[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 11[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 11[0m  [["LIMIT", 11]]
+  Rendered products/show_all.html.erb within layouts/application (549.5ms)
+Completed 500 Internal Server Error in 745ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x000000000e27fa70>:0x000000000e27db08>):
+     99:         <%= text_field_tag(:color, params[:color]) %>
+    100:         <%= submit_tag ("Search") %>
+    101:       <% end %>
+    102:       <%= f.select :person_type, Person::COLORS.map { |s| [I18n.t("colors.#{s}"), s] } %>
+    103:     </div>
+    104:   </div>
+    105: </div>
+  
+app/views/products/show_all.html.erb:102:in `_app_views_products_show_all_html_erb__698249812_118759880'
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:28:41 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  Rendered products/show_all.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/sumejjaha/Desktop/car-shop/app/views/products/show_all.html.erb:175: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+C:/Users/sumejjaha/Desktop/car-shop/app/views/products/show_all.html.erb:177: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/products/show_all.html.erb:175: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/products/show_all.html.erb:177: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:32:16 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (64.4ms)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..4)):
+     99:         <%= text_field_tag(:color, params[:color]) %>
+    100:         <%= submit_tag ("Search") %>
+    101:       <% end %>
+    102:       <%= label :class_name %><br>
+    103:       <%= select(:class_name, Product::COLORS_LIST) %>
+    104:     </div>
+    105:   </div>
+  
+app/views/products/show_all.html.erb:102:in `_app_views_products_show_all_html_erb__698249812_102780880'
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:32:47 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (45.6ms)
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..4)):
+     99:         <%= text_field_tag(:color, params[:color]) %>
+    100:         <%= submit_tag ("Search") %>
+    101:       <% end %>
+    102:       <%= label :color %><br>
+    103:       <%= select(:color, Product::COLORS_LIST) %>
+    104:     </div>
+    105:   </div>
+  
+app/views/products/show_all.html.erb:102:in `_app_views_products_show_all_html_erb__698249812_115075120'
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:34:33 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (84.3ms)
+Completed 200 OK in 362ms (Views: 319.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2019-09-09 19:37:24 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 5 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 265ms (Views: 212.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2019-09-09 19:40:45 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 5 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 283ms (Views: 230.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:40:49 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (70.9ms)
+Completed 200 OK in 319ms (Views: 275.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:42:29 +0200
+Processing by ProductsController#show_all as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/sumejjaha/Desktop/car-shop/app/models/product.rb:9: syntax error, unexpected ')', expecting ':'
+...lf.where(name.include ? search)
+...                              ^):
+  
+app/models/product.rb:9: syntax error, unexpected ')', expecting ':'
+app/controllers/products_controller.rb:48:in `show_all'
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:42:55 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (125.4ms)
+Completed 200 OK in 388ms (Views: 335.2ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda&commit=Search" for 127.0.0.1 at 2019-09-09 19:43:00 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda", "commit"=>"Search"}
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (79.7ms)
+Completed 200 OK in 351ms (Views: 308.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda+accord&commit=Search" for 127.0.0.1 at 2019-09-09 19:43:07 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda accord", "commit"=>"Search"}
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 315ms (Views: 272.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda+accord&commit=Search" for 127.0.0.1 at 2019-09-09 19:43:17 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda accord", "commit"=>"Search"}
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`name` = 'honda accord'[0m
+  Rendered products/show_all.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 332ms (Views: 277.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda+&commit=Search" for 127.0.0.1 at 2019-09-09 19:43:23 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda ", "commit"=>"Search"}
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`name` = 'honda '[0m
+  Rendered products/show_all.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 296ms (Views: 257.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=+&commit=Search" for 127.0.0.1 at 2019-09-09 19:43:33 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>" ", "commit"=>"Search"}
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`name` = ' '[0m
+  Rendered products/show_all.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 284ms (Views: 244.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:43:38 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (68.1ms)
+Completed 200 OK in 311ms (Views: 279.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:46:36 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (104.8ms)
+Completed 200 OK in 388ms (Views: 305.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda&commit=Search" for 127.0.0.1 at 2019-09-09 19:46:41 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda", "commit"=>"Search"}
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`name` = 'honda'[0m
+  Rendered products/show_all.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 268ms (Views: 228.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda&commit=Search" for 127.0.0.1 at 2019-09-09 19:49:13 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda", "commit"=>"Search"}
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (name = %'honda'%)[0m
+  Rendered products/show_all.html.erb within layouts/application (63.2ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'honda'%)' at line 1: SELECT `products`.* FROM `products` WHERE (name = %'honda'%)):
+    118:   </thead>
+    119: 
+    120:   <tbody>
+    121:     <% @products.each do |product| %>
+    122:       <tr>
+    123:     
+    124:         
+  
+app/views/products/show_all.html.erb:121:in `_app_views_products_show_all_html_erb__698249812_109965620'
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:49:27 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (84.2ms)
+Completed 200 OK in 325ms (Views: 289.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda&commit=Search" for 127.0.0.1 at 2019-09-09 19:49:36 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda", "commit"=>"Search"}
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (name = %'honda'%)[0m
+  Rendered products/show_all.html.erb within layouts/application (45.9ms)
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'honda'%)' at line 1: SELECT `products`.* FROM `products` WHERE (name = %'honda'%)):
+    118:   </thead>
+    119: 
+    120:   <tbody>
+    121:     <% @products.each do |product| %>
+    122:       <tr>
+    123:     
+    124:         
+  
+app/views/products/show_all.html.erb:121:in `_app_views_products_show_all_html_erb__698249812_102931900'
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:50:28 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (98.4ms)
+Completed 200 OK in 358ms (Views: 308.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda&commit=Search" for 127.0.0.1 at 2019-09-09 19:50:37 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda", "commit"=>"Search"}
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (name = '%#{search}%')[0m
+  Rendered products/show_all.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 287ms (Views: 246.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:51:55 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (101.2ms)
+Completed 200 OK in 361ms (Views: 311.7ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda&commit=Search" for 127.0.0.1 at 2019-09-09 19:51:59 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda", "commit"=>"Search"}
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (75.1ms)
+Completed 200 OK in 379ms (Views: 305.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda+accord&commit=Search" for 127.0.0.1 at 2019-09-09 19:52:06 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda accord", "commit"=>"Search"}
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (67.6ms)
+Completed 200 OK in 338ms (Views: 284.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 19:58:03 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (104.5ms)
+Completed 200 OK in 357ms (Views: 305.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda+accord&commit=Search" for 127.0.0.1 at 2019-09-09 19:58:09 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda accord", "commit"=>"Search"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 259ms (Views: 221.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=Honda+Accord&commit=Search" for 127.0.0.1 at 2019-09-09 19:58:15 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Honda Accord", "commit"=>"Search"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 276ms (Views: 235.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=Honda+Accord&commit=Search" for 127.0.0.1 at 2019-09-09 19:59:05 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Honda Accord", "commit"=>"Search"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 320ms (Views: 251.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=Honda+accord&commit=Search" for 127.0.0.1 at 2019-09-09 19:59:09 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Honda accord", "commit"=>"Search"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 298ms (Views: 251.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=Honda+accord&commit=Search" for 127.0.0.1 at 2019-09-09 20:00:05 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Honda accord", "commit"=>"Search"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 375ms (Views: 280.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=Honda&commit=Search" for 127.0.0.1 at 2019-09-09 20:00:08 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Honda", "commit"=>"Search"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 326ms (Views: 280.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at 2019-09-09 20:00:14 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Search"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 330ms (Views: 279.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=honda&commit=Search" for 127.0.0.1 at 2019-09-09 20:00:20 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"honda", "commit"=>"Search"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 284ms (Views: 244.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/show_all?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at 2019-09-09 20:00:27 +0200
+Processing by ProductsController#show_all as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Search"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show_all.html.erb within layouts/application (59.6ms)
+Completed 200 OK in 306ms (Views: 267.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2019-09-09 20:01:14 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 266ms (Views: 220.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/show_all" for 127.0.0.1 at 2019-09-09 20:01:53 +0200
+Processing by ProductsController#show_all as HTML
+  Rendering products/show_all.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/show_all.html.erb within layouts/application (67.1ms)
+Completed 200 OK in 318ms (Views: 275.1ms | ActiveRecord: 1.1ms)
+
+
