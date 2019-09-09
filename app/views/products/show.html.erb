@@ -1,3 +1,24 @@
+<style type="text/css">
+.buttonLink {
+  color: black !important;
+  background-color: transparent;
+}
+.buttonLink:hover {
+  background-color: transparent !important;
+  text-decoration: none;
+
+}
+.buttonLinkEdit {
+  color: white !important;
+  background-color: green;
+}
+
+.buttonLinkEdit:hover {
+  color: white !important;
+  background-color: #3d6638 !important;
+  text-decoration: none;
+}
+</style>
 <div class="header">
   <div class="wrap">   
      <div class="header-top"> 
@@ -44,8 +65,8 @@
 </div>
 
 <div class="container">
-<div class="row">
-  <div class="col-md-6">
+<div class="row" style="margin-top: 35px;">
+  <div class="col-md-6" style="padding-top: 35px;">
     <%= image_tag("carlist"+@product.id.to_s+".jpg", alt: "") %>
   </div>
   <div class="col-md-6">
@@ -95,34 +116,29 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-sm-4 col-md-2"></div>
-
-  <div class="col-sm-4 col-md-1">
+<div class="container" style="margin-bottom: 40px;">
+  <div class="row">
     <%if current_user.role_id.equal?(1) %>
-      <button type="button" class="btn btn-default">
-        <%= link_to 'Back', products_path %>
-      </button>
-    <%else %>
-      <button type="button" class="btn btn-default">
-      <%= link_to 'Back', show_all_url %>
-      </button>
-    <%end%>
-  </div>
-  
-  <div class="col-md-2">
-    <%if current_user.role_id.equal?(1) %>
-      <button type="button" class="btn btn-default">
-      <%= link_to 'Edit', edit_product_path(@product) %> 
+      <button type="button" class="btn btn-default pull-right buttonLinkEdit">
+      <%= link_to 'Edit', edit_product_path(@product), :class  => 'buttonLinkEdit' %> 
       </button>
     <%end%>
 
   <% if current_user.role_id.equal?(2) %>
-    <button type="button" class="btn btn-default">
-    <%= link_to "Add to cart", add_to_cart_url(:id => @product.id, :user_id => current_user.id), class: "button" %>
+    <button type="button" class="btn btn-default pull-right buttonLinkEdit">
+    <%= link_to "Add to cart", add_to_cart_url(:id => @product.id, :user_id => current_user.id), :class  => 'buttonLinkEdit' %>
     </button>
   <% end %>
-  </div>
-  <div class="col-sm-4 col-md-2"></div>
+
+  <%if current_user.role_id.equal?(1) %>
+      <button type="button" class="btn btn-default pull-right">
+        <%= link_to 'Back', products_path, :class  => 'buttonLink' %>
+      </button>
+    <%else %>
+      <button type="button" class="btn btn-default pull-right">
+      <%= link_to 'Back', show_all_url, :class  => 'buttonLink' %>
+      </button>
+    <%end%>
+</div>
 </div>
 

@@ -2,6 +2,26 @@
 <html>
 <head>
 <title>Free Car shop Website Template</title>
+<style type="text/css">
+.customLink {
+  color: black !important;
+}
+.customLink:hover {
+  background-color: #c6c7c5!important;
+  text-decoration: none;
+
+}
+
+.buttonLink {
+  color: black !important;
+  background-color: transparent;
+}
+.buttonLink:hover {
+  background-color: #c6c7c5!important;
+  text-decoration: none;
+
+}
+</style>
 <% content_for :css do
 	stylesheet_link_tag '/assets/stylesheets/style.css'
 end %>
@@ -24,7 +44,7 @@ end %>
 	stylesheet_link_tag '/assets/stylesheets/lightbox.css',media: 'screen'
 end %>
 <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto+Condensed'/>
-
+</head>
 <body>
 <div class="header">
 	<div class="wrap">   
@@ -72,7 +92,16 @@ end %>
 <div class="row" style="margin: 0 1px 0 0; padding: 6% 0px 16.1%; overflow-y:hidden;">
 
 <div class="container">
-<h1 style="color:white">Products</h1>
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-5">
+  <h1 style="color:white">Products</h1>
+</div>
+<div class="col-md-5">
+  <button type="button" class="btn btn-light pull-right"><%= link_to 'New Product', new_product_path, :class  => 'buttonLink' %></button>
+</div>
+<div class="col-md-1"></div>
+</div>
 
 <table class="table table-bordered" style="background-color:white; width:90%; margin:auto;">
   <thead>
@@ -96,8 +125,8 @@ end %>
         <td><%= product.quantity %></td>
 		    <td><%= product.code %></td>
 		    <td><%= product.price %></td>			
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td class="test-color"><%= link_to 'Show', product, :class  => 'customLink' %></td>
+        <td><%= link_to 'Edit', edit_product_path(product), :class  => 'customLink'  %></td>
   
 
         <% if product.quantity > get_availability(product.id) %>
@@ -118,7 +147,6 @@ end %>
 
 <br>
 
-<button type="button" class="btn btn-light"><%= link_to 'New Product', new_product_path %></button>
 </div>
 </div>
 </div>

@@ -1,3 +1,14 @@
+<style type="text/css">
+.buttonLink {
+  color: black !important;
+  background-color: transparent;
+}
+.buttonLink:hover {
+  background-color: transparent !important;
+  text-decoration: none;
+
+}
+</style>
 <div class="header">
   <div class="wrap">   
      <div class="header-top"> 
@@ -102,7 +113,7 @@
 
   <div class="col-md-8"></div>
   <div class="col-md-2" style="margin-top: 14px;">
-    <button type="button" class="btn btn-default"><%= link_to 'Back', products_path %></button>
+    <button type="button" class="btn btn-default"><%= link_to 'Back', products_path, :class  => 'buttonLink' %></button>
   </div>
   <div class="col-md-2">
     <div class="actions">
