@@ -1,3 +1,22 @@
+<style type="text/css">
+.buttonLink {
+  color: black !important;
+  background-color: transparent;
+}
+.buttonLink:hover {
+  background-color: transparent !important;
+  text-decoration: none;
+}
+.buttonLinkEdit {
+  color: white !important;
+  background-color: green;
+}
+.buttonLinkEdit:hover {
+  color: white !important;
+  background-color: #3d6638 !important;
+  text-decoration: none;
+}
+</style>
 <div class="header">
   <div class="wrap">   
      <div class="header-top"> 
@@ -104,22 +123,33 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-sm-2 col-md-2 col-lg-4">
+  
+  <div class="row field">
+    
+      <div class="col-sm-4 col-md-4 col-lg-4">
       <%if current_user.role_id.equal?(2) %>
-      <button type="button" class="btn btn-default" style="margin-top:0px;">
-        <%= link_to 'Back', show_my_services_path%>
+      <button type="button" class="btn btn-default  buttonLink pull left" style="margin-left: 0px;">
+        <%= link_to 'Back', show_my_services_path, :class  => 'buttonLink pull left'%>
       </button>
       <% end %>
     <%else if current_user.role_id.equal?(3) %>
-      <button type="button" class="btn btn-default" style="margin-top:0px;">
-      <%= link_to 'Back', services_path %>
+      <button type="button" class="btn btn-default  buttonLink pull left" style="margin-left: 0px;">
+      <%= link_to 'Back', services_path, :class  => 'buttonLink pull left' %>
       </button>
     <%end%>
+  </div>
+<div class="col-sm-8 col-md-4 col-lg-4" style="padding-right: 0;">
+      
+          <%= form.submit 'Submit', class:'btn btn-success buttonLinkEdit pull right', style:"margin-right: 0;float: right;"%>
+
+   
     </div>
-    <div class="col-sm-10 col-md-10 col-lg-8">
-        <%= form.submit %>
-    </div>
+
+   
+    
+        
+   
+    
   </div>
 
   </div>

@@ -73,15 +73,16 @@
 <div class="row" style="margin: 0 1px 0 0; padding: 6% 0px 16.1%; overflow-y:hidden;">
 
 <div class="container">
-<div class="row">
+<div class="row" style="float: right;">
   <div class="col-sm-2 col-md-1"></div>
   <div class="col-sm-4 col-md-5">
     <h1 style="color:white">Services</h1>
   </div>
-  <div class="col-sm-4 col-md-5">
-    <button type="button" class="btn btn-light pull-right"><%= link_to 'New service', new_service_path %></button>
+  <div class="col-sm-7 col-md-5" style="padding-right: 35px">
+    <button type="button" class="btn btn-light pull-right" style="margin-right: 0;float: right; background-color: green; "><%= link_to 'New service', new_service_path, style: 'color:white'%></button>
   </div>
   <div class="col-sm-2 col-md-1"></div>
+  
 </div>
 
 <table class="table table-bordered" style="background-color:white; width:90%; margin:auto;">

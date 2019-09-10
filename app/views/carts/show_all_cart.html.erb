@@ -117,10 +117,11 @@ end %>
 
 </br>
 </br>
-<h4> Total price :  <%= $total_price %> $</h4>
 
-<div>
-  <div class="form-group">
+
+<div style="margin-left: 300px;">
+  <h4> Total price :  <%= $total_price %> $</h4>
+  <div class="form-group" style="padding-top: 50px; padding-bottom: 50px;">
     <div class="field">
   Your address: <input class: 'form-control input-lg' type="text" name="address"><br><br>
 </div>
@@ -133,9 +134,10 @@ end %>
     <option value="card">Credit and debit cards</option>
     <option value="paypal">PayPal</option>
   </select><br><br>
+<button style="font-size:24px; margin-top:50px; background-color: green;">
+<%= link_to 'Buy now', buy_url, style:'color: white' %> <i class="fa fa-shopping-cart" style="color:white"></i>
 </div>
-<button style="font-size:24px">
-<%= link_to 'Buy now', buy_url %> <i class="fa fa-shopping-cart"></i>
+
 </div>
 </div>
 </div>

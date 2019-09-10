@@ -92,13 +92,13 @@ end %>
 <div class="row" style="margin: 0 1px 0 0; padding: 6% 0px 16.1%; overflow-y:hidden;">
 
 <div class="container">
-<div class="row">
+<div class="row" style="float: right; padding-bottom: 50px;">
 <div class="col-md-1"></div>
-<div class="col-md-5">
-  <h1 style="color:white">Products</h1>
+<div class="col-md-4" style="float: left;">
+  
 </div>
-<div class="col-md-5">
-  <button type="button" class="btn btn-light pull-right"><%= link_to 'New Product', new_product_path, :class  => 'buttonLink' %></button>
+<div class="col-md-6" style="padding-right: 48px;">
+  <button type="button" class="btn btn-light pull-right" style="background-color: green; float: right; margin-right: 0;"><%= link_to 'New Product', new_product_path, :class  => 'buttonLink', style:'color:white !important;' %></button>
 </div>
 <div class="col-md-1"></div>
 </div>
@@ -113,6 +113,7 @@ end %>
         <th>Price $</th>
       	<th colspan="2"></th>
       	<th>Status</th>
+        <th> </th>
     </tr>
   </thead>
 
