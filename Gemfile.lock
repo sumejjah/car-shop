@@ -78,6 +78,7 @@ GEM
     crass (1.0.3)
     erubi (1.7.1)
     execjs (2.7.0)
+    ffi (1.9.23)
     ffi (1.9.23-x64-mingw32)
     ffi (1.9.23-x86-mingw32)
     globalid (0.4.1)
@@ -106,16 +107,19 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
+    mysql2 (0.5.1)
     mysql2 (0.5.1-x64-mingw32)
     mysql2 (0.5.1-x86-mingw32)
     nio4r (2.3.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
     nokogiri (1.8.2-x64-mingw32)
       mini_portile2 (~> 2.3.0)
     nokogiri (1.8.2-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     popper_js (1.12.9)
     public_suffix (3.0.2)
-    puma (3.11.3)
+    puma (3.12.4)
     rack (2.0.4)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
@@ -196,6 +200,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+  ruby
   x64-mingw32
   x86-mingw32
 
@@ -212,7 +217,7 @@ DEPENDENCIES
   mini_magick (~> 4.3)
   mysql2
   popper_js (~> 1.12.9)
-  puma (~> 3.7)
+  puma (~> 3.12)
   rails (~> 5.1.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
