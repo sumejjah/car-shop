@@ -20,7 +20,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'coffee-script-source', '~> 1.11', '>= 1.11.1'
 gem 'mysql2'
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', '~> 1.3.2'
 gem 'mini_magick', '~> 4.3'
 
 group :development, :test do
